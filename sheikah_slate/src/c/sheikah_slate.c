@@ -15,11 +15,11 @@
 #define TRIFORCE_PIXELS 9
 
 #define DEMO_MODE false
-#define DEMO_BATTERY 70
+#define DEMO_BATTERY 40
 #define DEMO_CHARGING false
-#define DEMO_TEMPERATURE 35
-#define DEMO_CONDITIONS 1
-#define DEMO_RUNE 1
+#define DEMO_TEMPERATURE 45
+#define DEMO_CONDITIONS 2
+#define DEMO_RUNE 0
 #define DEMO_BLUETOOTH true
 
 static Window *s_main_window;
@@ -206,7 +206,8 @@ static void draw_frame(Layer *layer, GContext *ctx) {
 static void draw_fringes(Layer *layer, GContext *ctx) {
   GRect bounds = layer_get_bounds(layer);
   graphics_context_set_stroke_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
-  srand(4); // we seed the rng to draw the same noise each time
+  // srand(4); // we seed the rng to draw the same noise each time
+  // bruh i'm so stupid like this seeds rand for everything
 
   // outermost layer is completely filled
   graphics_draw_rect(ctx, bounds);
