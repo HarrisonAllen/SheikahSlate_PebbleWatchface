@@ -18,7 +18,6 @@ Displays current bluetooth connection state. Vibrates on disconnect.
 Displays current battery percentage. Turns yellow when charging, and red when very low.
 ### Custom Text
 Allows for up to 11 characters of input per column. Available characters: [A-Z, a-z, 0-9, ., !, ?, space, :].
-
 Can leave the input field in the settings blank for 11 random letters.
 ### Current Weather
 Displays the current weather conditions using OpenWeather. Can use current location or preset latitude and longitude coordinates.
@@ -27,6 +26,8 @@ Displays the current temperature using OpenWeather. The thresholds for *very col
 Can choose to use Metric (&deg;C) or Imperial (&deg;F).
 ### 7 Runes to Choose
 Randomly selects one of 7 different runes to display. Can select different runes in settings.
+### Settings Customization
+Uses Clay for the settings in Pebble
 ## Customization in Settings
 The following are customizable within the settings app:
 * Left and Right column text
@@ -41,5 +42,5 @@ The following are customizable within the settings app:
   * Comfortable ![comfortable](readme_resources/comfortable.png "Comfortable")
   * Hot ![hot](readme_resources/hot.png "Hot")
   * Very hot ![very hot](readme_resources/coldest.png "Very Hot")
-  
+
 ![Settings](readme_resources/Settings.png "Settings")
