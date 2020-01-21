@@ -27,7 +27,7 @@ Can choose to use Metric (&deg;C) or Imperial (&deg;F).
 ### 7 Runes to Choose
 Randomly selects one of 7 different runes to display. Can select different runes in settings.
 ### Settings Customization
-Uses Clay for the settings in Pebble
+Uses Clay for the settings in Pebble app.
 ## Customization in Settings
 The following are customizable within the settings app:
 * Left and Right column text
@@ -44,3 +44,5 @@ The following are customizable within the settings app:
   * Very hot ![very hot](readme_resources/coldest.png "Very Hot")
 
 ![Settings](readme_resources/Settings.png "Settings")
+### Contact
+Shoot me an email at hmallen@mit.edu if you have any questions!
