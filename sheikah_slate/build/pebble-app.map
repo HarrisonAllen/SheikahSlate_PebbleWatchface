@@ -1142,7 +1142,7 @@ LOAD aplite/appinfo.auto.c.25.o
 LOAD aplite/src/resource_ids.auto.c.25.o
 LOAD src/message_keys.auto.c.25.o
 LOAD /home/hmallen/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a
-LOAD /mnt/d/Pebble/dev_folder/sheikah_slate/node_modules/pebble-clay/dist/binaries/aplite/libpebble-clay.a
+LOAD /mnt/d/Pebble/dev_folder/SheikahSlate_PebbleWatchface/sheikah_slate/node_modules/pebble-clay/dist/binaries/aplite/libpebble-clay.a
 START GROUP
 LOAD /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a
 LOAD /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/thumb2/libc.a
@@ -1692,7 +1692,7 @@ DISCARD
  libm.a(*)
  libgcc.a(*)
  *(.eh_frame)
-OUTPUT(/mnt/d/Pebble/dev_folder/sheikah_slate/build/aplite/pebble-app.elf elf32-littlearm)
+OUTPUT(/mnt/d/Pebble/dev_folder/SheikahSlate_PebbleWatchface/sheikah_slate/build/aplite/pebble-app.elf elf32-littlearm)
 
 .ARM.attributes
                 0x0000000000000000       0x27
@@ -1782,26 +1782,26 @@ OUTPUT(/mnt/d/Pebble/dev_folder/sheikah_slate/build/aplite/pebble-app.elf elf32-
 .debug_ranges   0x0000000000000000      0x320
  .debug_ranges  0x0000000000000000      0x320 src/c/sheikah_slate.c.25.o
 
-.debug_line     0x0000000000000000     0x133a
- .debug_line    0x0000000000000000      0x91b src/c/sheikah_slate.c.25.o
- .debug_line    0x000000000000091b      0x139 aplite/appinfo.auto.c.25.o
- .debug_line    0x0000000000000a54       0xe3 aplite/src/resource_ids.auto.c.25.o
- .debug_line    0x0000000000000b37       0xdc src/message_keys.auto.c.25.o
- .debug_line    0x0000000000000c13      0x20a /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
- .debug_line    0x0000000000000e1d      0x226 /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
- .debug_line    0x0000000000001043       0x86 /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
- .debug_line    0x00000000000010c9      0x128 /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
- .debug_line    0x00000000000011f1      0x149 /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
+.debug_line     0x0000000000000000     0x1357
+ .debug_line    0x0000000000000000      0x938 src/c/sheikah_slate.c.25.o
+ .debug_line    0x0000000000000938      0x139 aplite/appinfo.auto.c.25.o
+ .debug_line    0x0000000000000a71       0xe3 aplite/src/resource_ids.auto.c.25.o
+ .debug_line    0x0000000000000b54       0xdc src/message_keys.auto.c.25.o
+ .debug_line    0x0000000000000c30      0x20a /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
+ .debug_line    0x0000000000000e3a      0x226 /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
+ .debug_line    0x0000000000001060       0x86 /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
+ .debug_line    0x00000000000010e6      0x128 /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
+ .debug_line    0x000000000000120e      0x149 /mnt/d/!Documents/pebble/dev_folder/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
 
-.debug_str      0x0000000000000000     0x1b4d
- .debug_str     0x0000000000000000     0x1630 src/c/sheikah_slate.c.25.o
-                                       0x1864 (size before relaxing)
- .debug_str     0x0000000000001630      0x236 aplite/appinfo.auto.c.25.o
-                                        0x31b (size before relaxing)
- .debug_str     0x0000000000001866      0x2cf aplite/src/resource_ids.auto.c.25.o
-                                        0x395 (size before relaxing)
- .debug_str     0x0000000000001b35       0x18 src/message_keys.auto.c.25.o
-                                        0x27b (size before relaxing)
+.debug_str      0x0000000000000000     0x1b6a
+ .debug_str     0x0000000000000000     0x164d src/c/sheikah_slate.c.25.o
+                                       0x1881 (size before relaxing)
+ .debug_str     0x000000000000164d      0x236 aplite/appinfo.auto.c.25.o
+                                        0x338 (size before relaxing)
+ .debug_str     0x0000000000001883      0x2cf aplite/src/resource_ids.auto.c.25.o
+                                        0x3b2 (size before relaxing)
+ .debug_str     0x0000000000001b52       0x18 src/message_keys.auto.c.25.o
+                                        0x298 (size before relaxing)
 
 .debug_frame    0x0000000000000000      0x2c0
  .debug_frame   0x0000000000000000      0x2c0 src/c/sheikah_slate.c.25.o
