@@ -1,0 +1,167 @@
+{
+  "name": "sheikah_slate",
+  "author": "Harrison Allen",
+  "version": "1.0.0",
+  "keywords": [
+    "pebble-app"
+  ],
+  "private": true,
+  "dependencies": {
+    "pebble-clay": "^1.0.4"
+  },
+  "pebble": {
+    "displayName": "Sheikah Slate",
+    "uuid": "35616555-51de-4f7e-8aee-14c0a0cdd4c3",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "diorite"
+    ],
+    "capabilities": [
+      "configurable"
+    ],
+    "watchapp": {
+      "watchface": true
+    },
+    "messageKeys": [
+      "TEMPERATURE",
+      "CONDITIONS",
+      "LeftColumnText",
+      "RightColumnText",
+      "RunesToChoose[7]",
+      "RuneChangeRate",
+      "WeatherCheckRate",
+      "UseCurrentLocation",
+      "Latitude",
+      "Longitude",
+      "TemperatureMetric",
+      "Temperature0",
+      "Temperature1",
+      "Temperature2",
+      "Temperature3",
+      "Temperature4"
+    ],
+    "resources": {
+      "media": [
+        {
+          "characterRegex": "[0-9:A-Za-z ]",
+          "type": "font",
+          "name": "FONT_BOTW_24",
+          "file": "fonts/botw.ttf",
+          "compatibility": "2.7"
+        },
+        {
+          "characterRegex": "[0-9:A-Za-z ]",
+          "type": "font",
+          "name": "FONT_BOTW_22",
+          "file": "fonts/botw.ttf",
+          "compatibility": "2.7"
+        },
+        {
+          "characterRegex": "[0-9:A-Za-z .!?]",
+          "type": "font",
+          "name": "FONT_SHEIKAH_RUNES_16",
+          "file": "fonts/sheikahrunes-small.ttf",
+          "compatibility": "2.7"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_BT_CONN",
+          "file": "images/BluetoothConnected.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_BT_DISC",
+          "file": "images/BluetoothDisconnected.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_RUNE_BOMB_ROUND",
+          "file": "images/RuneBombRound.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_RUNE_BOMB_SQUARE",
+          "file": "images/RuneBombSquare.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_RUNE_MAGNESIS",
+          "file": "images/RuneMagnesis.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_RUNE_STASIS",
+          "file": "images/RuneStasis.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_RUNE_CRYONIS",
+          "file": "images/RuneCryonis.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_RUNE_CAMERA",
+          "file": "images/RuneCamera.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_RUNE_CYCLE",
+          "file": "images/RuneCycle.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_WEATHER_SUNNY",
+          "file": "images/WeatherSunny.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_WEATHER_PARTLYCLOUDY",
+          "file": "images/WeatherPartlyCloudy.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_WEATHER_CLOUDY",
+          "file": "images/WeatherCloudy.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_WEATHER_RAINY",
+          "file": "images/WeatherRainy.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_WEATHER_SNOWY",
+          "file": "images/WeatherSnowy.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_WEATHER_STORMY",
+          "file": "images/WeatherStormy.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_SPLASH_LEFT",
+          "file": "images/SplashLeft.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_SPLASH_RIGHT",
+          "file": "images/SplashRight.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_SPLASH_EYE_LEFT",
+          "file": "images/SplashEyeLeft.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "IMAGE_SPLASH_EYE_RIGHT",
+          "file": "images/SplashEyeRight.png"
+        }
+      ]
+    }
+  }
+}
