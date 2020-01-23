@@ -6,6 +6,7 @@
 // DO NOT MODIFY - CHANGES WILL BE OVERWRITTEN
 //
 
+extern uint32_t MESSAGE_KEY_AmericanDate;
 extern uint32_t MESSAGE_KEY_CONDITIONS;
 extern uint32_t MESSAGE_KEY_Latitude;
 extern uint32_t MESSAGE_KEY_LeftColumnText;

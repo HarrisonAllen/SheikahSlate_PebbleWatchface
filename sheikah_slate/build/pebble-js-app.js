@@ -246,7 +246,7 @@
 /* 5 */
 /***/ (function(module, exports) {
 
-	module.exports = {"CONDITIONS":10008,"Latitude":10014,"LeftColumnText":10009,"Longitude":10015,"RightColumnText":10010,"RuneChangeRate":10011,"RunesToChoose":10000,"TEMPERATURE":10007,"Temperature0":10017,"Temperature1":10018,"Temperature2":10019,"Temperature3":10020,"Temperature4":10021,"TemperatureMetric":10016,"UseCurrentLocation":10013,"WeatherCheckRate":10012}
+	module.exports = {"AmericanDate":10022,"CONDITIONS":10008,"Latitude":10014,"LeftColumnText":10009,"Longitude":10015,"RightColumnText":10010,"RuneChangeRate":10011,"RunesToChoose":10000,"TEMPERATURE":10007,"Temperature0":10017,"Temperature1":10018,"Temperature2":10019,"Temperature3":10020,"Temperature4":10021,"TemperatureMetric":10016,"UseCurrentLocation":10013,"WeatherCheckRate":10012}
 
 /***/ }),
 /* 6 */
@@ -260,6 +260,22 @@
 	  { 
 	    "type": "text",
 	    "defaultValue": "Set up your Sheikah Slate here"
+	  },
+	  {
+	    "type": "section",
+	    "items": [
+	      {
+	        "type": "heading",
+	        "defaultValue": "Time and Date"
+	      },
+	      {
+	        "type": "toggle",
+	        "messageKey": "AmericanDate",
+	        "label": "Use American date format",
+	        "defaultValue": true,
+	        "description": "Set false for '01 Jan', true for 'Jan 01'"
+	      }
+	    ]
 	  },
 	  {
 	  	"type": "section",

@@ -66,6 +66,7 @@ typedef struct ClaySettings {
   int Temperature4;                // Hottest temperature
   int TEMPERATURE;                 // Current temperature
   Weather CONDITIONS;              // Current weather conditions
+  bool AmericanDate;               // use American date format (Jan 01)?
 } ClaySettings;
 
 static ClaySettings settings;
@@ -102,6 +103,8 @@ static const uint8_t bottom_right[] = {160,96,160,208,232,23,154,221,254};
 static int TEMP_NOTCHES[] = {30, 50, 70, 85, 100};
 static int TEMP_ANGLE_NOTCHES[] = {-130, -60, 0, 60, 130};
 // Coldest, Cold, Comfortable, Hot, Hottest
+
+static void update_date();
 
 // draw the triforces in the corner of the rune frame
 static void draw_triforce(GContext *ctx, uint8_t corner){
@@ -450,6 +453,7 @@ static void default_settings() {
   settings.Temperature4 = 100;                    // oh god give me some AC please
   settings.TEMPERATURE = rand()%120;              // mystery temperature
   settings.CONDITIONS = rand()%NUM_WEATHER_ICONS; // mystery weather
+  settings.AmericanDate = true;                   // Jan 01 by default
 }
 
 // Pick the next rune to display
@@ -496,6 +500,9 @@ static void update_display(){
 
   // redraw the temperature
   layer_mark_dirty(s_temperature_layer);
+
+  // update the date format
+  s_date_set = false;
 
   // update the weather icon
   gbitmap_destroy(s_weather_icon_bitmap);
@@ -663,6 +670,12 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
     }
   }
 
+  // American date format?
+  Tuple *american_date_t = dict_find(iterator, MESSAGE_KEY_AmericanDate);
+  if(american_date_t) {
+    settings.AmericanDate = american_date_t->value->int32 == 1;
+  }
+
   save_settings(); // save the new settings! Current weather included
 
 }
@@ -796,7 +809,6 @@ static void main_window_load(Window *window) {
   text_layer_set_text_color(s_time_layer, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
   text_layer_set_font(s_time_layer, s_time_font);
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
-  APP_LOG(APP_LOG_LEVEL_INFO, "Free heap: %d", (int)heap_bytes_free()); 
 
   // date
   s_date_layer = text_layer_create(GRect(0, 137, bounds.size.w, 22));
@@ -807,7 +819,6 @@ static void main_window_load(Window *window) {
   text_layer_set_text_color(s_date_layer, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
   text_layer_set_font(s_date_layer, s_date_font);
   text_layer_set_text_alignment(s_date_layer, GTextAlignmentCenter);
-  APP_LOG(APP_LOG_LEVEL_INFO, "Free heap: %d", (int)heap_bytes_free()); 
 
   // columns
   // left column
@@ -820,7 +831,6 @@ static void main_window_load(Window *window) {
   text_layer_set_font(s_left_column_layer, s_sheikah_font);
   text_layer_set_text_alignment(s_left_column_layer, GTextAlignmentLeft);
   text_layer_set_overflow_mode(s_left_column_layer, GTextOverflowModeWordWrap);
-  APP_LOG(APP_LOG_LEVEL_INFO, "Free heap: %d", (int)heap_bytes_free()); 
 
   // right column
   s_right_column_layer = text_layer_create(GRect(bounds.size.w-14, -4, 16, bounds.size.h+8));
@@ -830,7 +840,6 @@ static void main_window_load(Window *window) {
   text_layer_set_font(s_right_column_layer, s_sheikah_font);
   text_layer_set_text_alignment(s_right_column_layer, GTextAlignmentLeft);
   text_layer_set_overflow_mode(s_right_column_layer, GTextOverflowModeWordWrap);
-  APP_LOG(APP_LOG_LEVEL_INFO, "Free heap: %d", (int)heap_bytes_free()); 
 
   // bitmaps
   // rune border
@@ -848,19 +857,16 @@ static void main_window_load(Window *window) {
   s_rune_bitmap = gbitmap_create_with_resource(RUNES[rand() % NUM_RUNES]);
   bitmap_layer_set_bitmap(s_rune_layer, s_rune_bitmap);
   // bitmap_layer_set_compositing_mode(s_rune_layer, GCompOpSet);
-  APP_LOG(APP_LOG_LEVEL_INFO, "Free heap: %d", (int)heap_bytes_free()); 
 
   // bluetooth icon
   s_bt_icon_layer = bitmap_layer_create(GRect(16,3,25,24));
   s_bt_icon_bitmap_conn = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BT_CONN);
   s_bt_icon_bitmap_disc = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BT_DISC);
-  APP_LOG(APP_LOG_LEVEL_INFO, "Free heap: %d", (int)heap_bytes_free()); 
 
   // weather icon
   s_weather_icon_layer = bitmap_layer_create(GRect(16,141,24,24));
   s_weather_icon_bitmap = gbitmap_create_with_resource(WEATHER_ICONS[rand() % NUM_WEATHER_ICONS]);
   bitmap_layer_set_bitmap(s_weather_icon_layer, s_weather_icon_bitmap);
-  APP_LOG(APP_LOG_LEVEL_INFO, "Free heap: %d", (int)heap_bytes_free()); 
 
 
   // left wing of splash layer
@@ -869,7 +875,6 @@ static void main_window_load(Window *window) {
   bitmap_layer_set_bitmap(s_splash_left_layer, s_splash_left_bitmap);
   bitmap_layer_set_compositing_mode(s_splash_left_layer, GCompOpSet);
 
-  APP_LOG(APP_LOG_LEVEL_INFO, "Free heap: %d", (int)heap_bytes_free()); 
   // right wing of splash layer
   s_splash_right_layer = bitmap_layer_create(GRect(87,27,46,109));
   s_splash_right_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SPLASH_RIGHT);
@@ -981,6 +986,17 @@ static void update_time() {
   text_layer_set_text(s_time_layer, s_buffer);
 }
 
+static void update_date(struct tm *tick_time){
+  static char s_date_buffer[8];
+  if (settings.AmericanDate) {
+    strftime(s_date_buffer, sizeof(s_date_buffer), "%b %d", tick_time); // displayed as "Jan 01"
+  } else {
+    strftime(s_date_buffer, sizeof(s_date_buffer), "%d %b", tick_time); // displayed as "01 Jan"
+  }
+
+  text_layer_set_text(s_date_layer, s_date_buffer);
+}
+
 // this fires every minute
 static void tick_handler(struct tm *tick_time, TimeUnits units_changes) {
   update_time(); // display the time
@@ -1004,10 +1020,7 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changes) {
 
   // update date on first call, or at midnight (00:00)
   if (!s_date_set || (tick_time->tm_min == 0 && tick_time->tm_hour == 0)) {
-    static char s_date_buffer[8];
-    strftime(s_date_buffer, sizeof(s_date_buffer), "%d %b", tick_time); // displayed as "Jan 01"
-
-    text_layer_set_text(s_date_layer, s_date_buffer);
+    update_date(tick_time);
     // if this is the last to load, then animate!
     if (!s_splash_anim_started && !s_date_set && (s_weather_loaded || !connection_service_peek_pebble_app_connection())) {
       init_splash_anim();

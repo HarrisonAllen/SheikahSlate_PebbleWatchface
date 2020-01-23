@@ -41,7 +41,8 @@
       "Temperature1",
       "Temperature2",
       "Temperature3",
-      "Temperature4"
+      "Temperature4",
+      "AmericanDate"
     ],
     "resources": {
       "media": [

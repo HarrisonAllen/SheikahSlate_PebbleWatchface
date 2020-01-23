@@ -1,4 +1,4 @@
-# project  configured on Tue Jan 21 01:27:09 2020 by
+# project  configured on Thu Jan 23 12:02:27 2020 by
 # waf 1.7.11 (abi 98, python 20711f0 on linux2)
 # using /home/hmallen/.pebble-sdk/SDKs/current/sdk-core/pebble/waf configure
 #
@@ -7,7 +7,7 @@ Setting top to
 /mnt/d/Pebble/dev_folder/SheikahSlate_PebbleWatchface/sheikah_slate
 ----------------------------------------
 Setting out to
-/mnt/d/Pebble/dev_folder/SheikahSlate_PebbleWatchface/sheikah_slate/build
+/mnt/d/Pebble/dev_folder/sheikahslate_pebblewatchface/sheikah_slate/build
 ----------------------------------------
 Checking for program webpack
 /home/hmallen/.pebble-sdk/SDKs/current/node_modules/.bin/webpack

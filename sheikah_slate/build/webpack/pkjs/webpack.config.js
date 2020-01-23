@@ -6,7 +6,7 @@ const isSandbox = false;
 
 // Array with absolute file path strings
 const entryFilenames = ["_pkjs_shared_additions.js",
-"/mnt/d/Pebble/dev_folder/SheikahSlate_PebbleWatchface/sheikah_slate/src/pkjs/index.js"];
+"/mnt/d/Pebble/dev_folder/sheikahslate_pebblewatchface/sheikah_slate/src/pkjs/index.js"];
 
 // folder path string
 const outputPath = "build";
@@ -18,10 +18,10 @@ const outputFilename = "pebble-js-app.js";
 const resolveRoots = ["/home/hmallen/.pebble-sdk/SDKs/current/sdk-core/pebble/common/include",
 "/home/hmallen/.pebble-sdk/SDKs/current/sdk-core/pebble/common/tools/webpack",
 "/home/hmallen/.pebble-sdk/SDKs/current/node_modules",
-"/mnt/d/Pebble/dev_folder/SheikahSlate_PebbleWatchface/sheikah_slate/build/js"];
+"/mnt/d/Pebble/dev_folder/sheikahslate_pebblewatchface/sheikah_slate/build/js"];
 
 // Object, { alias1: 'path1', ... }
-const resolveAliases = {"app_package.json": "/mnt/d/Pebble/dev_folder/SheikahSlate_PebbleWatchface/sheikah_slate/package.json",
+const resolveAliases = {"app_package.json": "/mnt/d/Pebble/dev_folder/sheikahslate_pebblewatchface/sheikah_slate/package.json",
 "pebble-clay": "pebble-clay/dist/js"};
 
 // null or Object with key 'sourceMapFilename'

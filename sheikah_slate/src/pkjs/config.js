@@ -8,6 +8,22 @@ module.exports = [
     "defaultValue": "Set up your Sheikah Slate here"
   },
   {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "defaultValue": "Time and Date"
+      },
+      {
+        "type": "toggle",
+        "messageKey": "AmericanDate",
+        "label": "Use American date format",
+        "defaultValue": true,
+        "description": "Set false for '01 Jan', true for 'Jan 01'"
+      }
+    ]
+  },
+  {
   	"type": "section",
   	"items": [
   		{
