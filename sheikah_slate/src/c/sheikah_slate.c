@@ -17,7 +17,7 @@
 #define DEMO_MODE false
 #define DEMO_BATTERY 40
 #define DEMO_CHARGING false
-#define DEMO_TEMPERATURE 45
+#define DEMO_TEMPERATURE 60
 #define DEMO_CONDITIONS 2
 #define DEMO_RUNE 0
 #define DEMO_BLUETOOTH true
@@ -109,6 +109,7 @@ static void update_date();
 
 // draw the triforces in the corner of the rune frame
 static void draw_triforce(GContext *ctx, uint8_t corner){
+#if defined(PBL_RECT)
   graphics_context_set_stroke_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
   static uint8_t i;
   uint8_t x = 0, y = 0;
@@ -188,11 +189,13 @@ static void draw_triforce(GContext *ctx, uint8_t corner){
       x=0;
     }
   }
+#endif
 }
 
 // rather than having a bitmap, we draw the rune frame
 // this is necessary due to aplite memory restrictions
 static void draw_frame(Layer *layer, GContext *ctx) {
+#if defined(PBL_RECT)
   // draw boxes
   graphics_context_set_stroke_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
   graphics_draw_rect(ctx, GRect(0, 0, FRAME_SIZE, FRAME_SIZE));
@@ -203,11 +206,13 @@ static void draw_frame(Layer *layer, GContext *ctx) {
   draw_triforce(ctx, 1);
   draw_triforce(ctx, 2);
   draw_triforce(ctx, 3);
+#endif
 }
 
 // also rather than having a bitmap, we draw the noise
 // around the edges of the screen
 static void draw_fringes(Layer *layer, GContext *ctx) {
+#if defined(PBL_RECT)
   GRect bounds = layer_get_bounds(layer);
   graphics_context_set_stroke_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
   // srand(4); // we seed the rng to draw the same noise each time
@@ -273,6 +278,7 @@ static void draw_fringes(Layer *layer, GContext *ctx) {
       graphics_draw_pixel(ctx, GPoint(bounds.size.w-y-1,x));
     }
   }
+#endif
 }
 
 // lerp between points a and b with percent c
@@ -311,8 +317,26 @@ static void battery_update_proc(Layer *layer, GContext *ctx) {
   int length = (cur_battery * TRIG_MAX_ANGLE) / 100; // get percent around circle
 
   // fill grey background
-  graphics_context_set_fill_color(ctx, PBL_IF_BW_ELSE(GColorBlack, GColorFromHEX(0x555555)));
+  graphics_context_set_fill_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0x555555)));
   graphics_fill_radial(ctx, bounds, GOvalScaleModeFitCircle, 7, 0, TRIG_MAX_ANGLE);
+#if defined(PBL_BW)
+  GBitmap *fb = graphics_capture_frame_buffer(ctx);
+  GRect frame = layer_get_frame(layer);
+  for (uint16_t y = frame.origin.y; y < frame.origin.y + frame.size.h; y++) {
+    GBitmapDataRowInfo info = gbitmap_get_data_row_info(fb, y);
+    for (uint16_t x = frame.origin.x; x < frame.origin.x + frame.size.w; x++) {
+      uint8_t pixel_color = ((x + (y & 1)) & 1);
+      uint16_t byte = (x >> 3); // x / 8
+      uint8_t bit = x & 7; // x % 8
+      uint8_t *byte_mod = &info.data[byte];
+      if (!(*byte_mod & (1 << bit))) {
+        continue;
+      }
+      *byte_mod ^= (-pixel_color ^ *byte_mod) & (1 << bit);
+    }
+  }
+  graphics_release_frame_buffer(ctx, fb);
+#endif
 
   // then fill up stamina bar counterclockwise
   graphics_context_set_fill_color(ctx, curColor);
@@ -492,12 +516,14 @@ static void pick_new_rune(){
 
 // update display after reading from clay/weather
 static void update_display(){
+#if defined(PBL_RECT)
   // set column texts
   text_layer_set_text(s_left_column_layer, settings.LeftColumnText);
   text_layer_set_text(s_right_column_layer, settings.RightColumnText);
 
   // set the next rune
   pick_new_rune();
+#endif
 
   // redraw the temperature
   layer_mark_dirty(s_temperature_layer);
@@ -681,7 +707,6 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
   }
 
   save_settings(); // save the new settings! Current weather included
-
 }
 
 // Message failed to receive
@@ -778,18 +803,24 @@ static void temperature_update_proc(Layer *layer, GContext *ctx) {
   static uint8_t i;
   for (i = 0; i < 9; i++){
     graphics_draw_line(ctx, center, 
-      gpoint_from_polar(bounds, GOvalScaleModeFillCircle, DEG_TO_TRIGANGLE(-120+30*i)));
+    gpoint_from_polar(bounds, GOvalScaleModeFillCircle, DEG_TO_TRIGANGLE(-120+30*i)));
   }
 
   // draw the needle
   GRect small_bounds = grect_crop(bounds, 3);
-  graphics_context_set_fill_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
-  graphics_fill_circle(ctx, center, 2);
   int temp_angle = get_temp_angle();
+#if defined(PBL_BW)
+  graphics_context_set_stroke_color(ctx, GColorBlack);
+  graphics_context_set_stroke_width(ctx, 4);
+  graphics_draw_line(ctx, center, 
+                     gpoint_from_polar(small_bounds, GOvalScaleModeFitCircle, DEG_TO_TRIGANGLE(temp_angle)));
+#endif
   graphics_context_set_stroke_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
   graphics_context_set_stroke_width(ctx, 2);
   graphics_draw_line(ctx, center, 
                      gpoint_from_polar(small_bounds, GOvalScaleModeFitCircle, DEG_TO_TRIGANGLE(temp_angle)));
+  graphics_context_set_fill_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
+  graphics_fill_circle(ctx, center, 2);
 }
 
 // Something is taking too long! start the animation
@@ -804,27 +835,34 @@ static void main_window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
   GRect bounds = layer_get_bounds(window_layer);
 
+  // Watchface Resources
   // time
+#if defined(PBL_ROUND)
+  s_time_layer = text_layer_create(GRect(0, 40, bounds.size.w, 32));
+  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_32));
+#else
   s_time_layer = text_layer_create(GRect(0, 1, bounds.size.w, 24));
-  // create and load time font
   s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_24));
-  // stylize the text
+#endif
   text_layer_set_background_color(s_time_layer, GColorClear);
   text_layer_set_text_color(s_time_layer, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
   text_layer_set_font(s_time_layer, s_time_font);
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
 
   // date
+#if defined(PBL_ROUND)
+  s_date_layer = text_layer_create(GRect(0, 100, bounds.size.w, 32));
+  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_32));
+#else
   s_date_layer = text_layer_create(GRect(0, 137, bounds.size.w, 22));
-  // create and load date font (slightly smaller time font)
   s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_22));
-  // stylize the text
+#endif
   text_layer_set_background_color(s_date_layer, GColorClear);
   text_layer_set_text_color(s_date_layer, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
   text_layer_set_font(s_date_layer, s_date_font);
   text_layer_set_text_alignment(s_date_layer, GTextAlignmentCenter);
 
-  // columns
+#if defined(PBL_RECT)
   // left column
   s_left_column_layer = text_layer_create(GRect(0, -4, 16, bounds.size.h+8));
   // create and load rune font
@@ -845,7 +883,6 @@ static void main_window_load(Window *window) {
   text_layer_set_text_alignment(s_right_column_layer, GTextAlignmentLeft);
   text_layer_set_overflow_mode(s_right_column_layer, GTextOverflowModeWordWrap);
 
-  // bitmaps
   // rune border
   s_frame_layer = layer_create(GRect(FRAME_X, FRAME_Y, FRAME_SIZE, FRAME_SIZE));
   layer_set_update_proc(s_frame_layer, draw_frame);
@@ -855,64 +892,96 @@ static void main_window_load(Window *window) {
   layer_set_update_proc(s_fringes_layer, draw_fringes);
   layer_mark_dirty(s_fringes_layer);
 
-
   // runes
   s_rune_layer = bitmap_layer_create(GRect(20,32,102,102));
   s_rune_bitmap = gbitmap_create_with_resource(RUNES[rand() % NUM_RUNES]);
   bitmap_layer_set_bitmap(s_rune_layer, s_rune_bitmap);
+#endif
   // bitmap_layer_set_compositing_mode(s_rune_layer, GCompOpSet);
 
   // bluetooth icon
+#if defined(PBL_ROUND)
+  s_bt_icon_layer = bitmap_layer_create(GRect(30,78,25,24));
+#else
   s_bt_icon_layer = bitmap_layer_create(GRect(16,3,25,24));
+#endif
   s_bt_icon_bitmap_conn = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BT_CONN);
   s_bt_icon_bitmap_disc = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BT_DISC);
+  // update bluetooth icon
+  bluetooth_callback(connection_service_peek_pebble_app_connection());
+
+  // battery stamina wheel
+  #if defined(PBL_ROUND)
+    s_battery_layer = layer_create(GRect(122, 79, 22, 22));
+  #else
+    s_battery_layer = layer_create(GRect(105, 4, 22, 22));
+  #endif
+  // assign update procedure to battery layer
+  layer_set_update_proc(s_battery_layer, battery_update_proc);
 
   // weather icon
+#if defined(PBL_ROUND)
+  s_weather_icon_layer = bitmap_layer_create(GRect(61,78,24,24));
+#else
   s_weather_icon_layer = bitmap_layer_create(GRect(16,141,24,24));
+#endif
   s_weather_icon_bitmap = gbitmap_create_with_resource(WEATHER_ICONS[rand() % NUM_WEATHER_ICONS]);
   bitmap_layer_set_bitmap(s_weather_icon_layer, s_weather_icon_bitmap);
 
+  // temperature
+#if defined(PBL_ROUND)
+  s_temperature_layer = layer_create(GRect(92, 79, 22, 22));
+#else
+  s_temperature_layer = layer_create(GRect(105, 143, 22, 22));
+#endif
+  layer_set_update_proc(s_temperature_layer, temperature_update_proc);
 
+  // Loading Screen
   // left wing of splash layer
+#if defined(PBL_ROUND)
+  s_splash_left_layer = bitmap_layer_create(GRect(28,33,46,114));
+#else
   s_splash_left_layer = bitmap_layer_create(GRect(10,27,46,114));
+#endif
   s_splash_left_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SPLASH_LEFT);
   bitmap_layer_set_bitmap(s_splash_left_layer, s_splash_left_bitmap);
   bitmap_layer_set_compositing_mode(s_splash_left_layer, GCompOpSet);
 
   // right wing of splash layer
+#if defined(PBL_ROUND)
+  s_splash_right_layer = bitmap_layer_create(GRect(105,33,46,109));
+#else
   s_splash_right_layer = bitmap_layer_create(GRect(87,27,46,109));
+#endif
   s_splash_right_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SPLASH_RIGHT);
   bitmap_layer_set_bitmap(s_splash_right_layer, s_splash_right_bitmap);
   bitmap_layer_set_compositing_mode(s_splash_right_layer, GCompOpSet);
 
   // left half of splash layer eye
+#if defined(PBL_ROUND)
+  s_splash_left_eye_layer = bitmap_layer_create(GRect(18,6,72,168));
+#else
   s_splash_left_eye_layer = bitmap_layer_create(GRect(0,0,72,168));
+#endif
   s_splash_left_eye_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SPLASH_EYE_LEFT);
   bitmap_layer_set_bitmap(s_splash_left_eye_layer, s_splash_left_eye_bitmap);
 
   // right half of splash layer eye
+#if defined(PBL_ROUND)
+  s_splash_right_eye_layer = bitmap_layer_create(GRect(90,6,72,168));
+#else
   s_splash_right_eye_layer = bitmap_layer_create(GRect(72,0,72,168));
+#endif
   s_splash_right_eye_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SPLASH_EYE_RIGHT);
   bitmap_layer_set_bitmap(s_splash_right_eye_layer, s_splash_right_eye_bitmap);
 
-  // update bluetooth icon
-  bluetooth_callback(connection_service_peek_pebble_app_connection());
-
-  // drawings
-  // battery stamina wheel
-  s_battery_layer = layer_create(GRect(105, 4, 22, 22));
-  // assign update procedure to battery layer
-  layer_set_update_proc(s_battery_layer, battery_update_proc);
-
-  // temperature
-  s_temperature_layer = layer_create(GRect(105, 143, 22, 22));
-  layer_set_update_proc(s_temperature_layer, temperature_update_proc);
-
   // add layers
+#if defined(PBL_RECT)
   layer_add_child(window_layer, bitmap_layer_get_layer(s_rune_layer)); // runes below the frame
   layer_add_child(window_layer, s_frame_layer);
   layer_add_child(window_layer, text_layer_get_layer(s_left_column_layer)); // everything else on top of frame
   layer_add_child(window_layer, text_layer_get_layer(s_right_column_layer));
+#endif
   layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
   layer_add_child(window_layer, text_layer_get_layer(s_date_layer));
   layer_add_child(window_layer, s_battery_layer);
@@ -923,7 +992,9 @@ static void main_window_load(Window *window) {
   layer_add_child(window_layer, bitmap_layer_get_layer(s_splash_right_eye_layer));
   layer_add_child(window_layer, bitmap_layer_get_layer(s_splash_left_layer));
   layer_add_child(window_layer, bitmap_layer_get_layer(s_splash_right_layer));// fringes cover everything
+#if defined(PBL_RECT)
   layer_add_child(window_layer, s_fringes_layer);
+#endif
 
   update_display(); // and update the display to fill in everything
 }
@@ -931,32 +1002,50 @@ static void main_window_load(Window *window) {
 // unload everything!
 static void main_window_unload(Window *window) {
   // unload regular layers
-  layer_destroy(s_battery_layer);
-  layer_destroy(s_temperature_layer);
-  layer_destroy(s_frame_layer);
-  layer_destroy(s_fringes_layer);
+  if (s_battery_layer != NULL)
+    layer_destroy(s_battery_layer);
+  if (s_temperature_layer != NULL)
+    layer_destroy(s_temperature_layer);
+  if (s_frame_layer != NULL)
+    layer_destroy(s_frame_layer);
+  if (s_fringes_layer != NULL)
+    layer_destroy(s_fringes_layer);
 
   // unload text layers
-  text_layer_destroy(s_time_layer);
-  text_layer_destroy(s_date_layer);
-  text_layer_destroy(s_left_column_layer);
-  text_layer_destroy(s_right_column_layer);
+  if (s_time_layer != NULL)
+    text_layer_destroy(s_time_layer);
+  if (s_date_layer != NULL)
+    text_layer_destroy(s_date_layer);
+  if (s_left_column_layer != NULL)
+    text_layer_destroy(s_left_column_layer);
+  if (s_right_column_layer != NULL)
+    text_layer_destroy(s_right_column_layer);
 
   // unload custom fonts
-  fonts_unload_custom_font(s_time_font);
-  fonts_unload_custom_font(s_date_font);
-  fonts_unload_custom_font(s_sheikah_font);
+  if (s_time_font != NULL)
+    fonts_unload_custom_font(s_time_font);
+  if (s_date_font != NULL)
+    fonts_unload_custom_font(s_date_font);
+  if (s_sheikah_font != NULL)
+    fonts_unload_custom_font(s_sheikah_font);
 
   // unload bitmap layers
-  bitmap_layer_destroy(s_rune_layer);
-  bitmap_layer_destroy(s_bt_icon_layer);
-  bitmap_layer_destroy(s_weather_icon_layer);
+  if (s_rune_layer != NULL)
+    bitmap_layer_destroy(s_rune_layer);
+  if (s_bt_icon_layer != NULL)
+    bitmap_layer_destroy(s_bt_icon_layer);
+  if (s_weather_icon_layer != NULL)
+    bitmap_layer_destroy(s_weather_icon_layer);
 
   // unload gbitmaps
-  gbitmap_destroy(s_rune_bitmap);
-  gbitmap_destroy(s_bt_icon_bitmap_conn);
-  gbitmap_destroy(s_bt_icon_bitmap_disc);
-  gbitmap_destroy(s_weather_icon_bitmap);
+  if (s_rune_bitmap != NULL)
+    gbitmap_destroy(s_rune_bitmap);
+  if (s_bt_icon_bitmap_conn != NULL)
+    gbitmap_destroy(s_bt_icon_bitmap_conn);
+  if (s_bt_icon_bitmap_disc != NULL)
+    gbitmap_destroy(s_bt_icon_bitmap_disc);
+  if (s_weather_icon_bitmap != NULL)
+    gbitmap_destroy(s_weather_icon_bitmap);
 
   // splash layers might already be destroyed
   if (s_splash_left_layer != NULL)

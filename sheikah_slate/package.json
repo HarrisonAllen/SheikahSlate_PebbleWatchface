@@ -51,23 +51,48 @@
         {
           "characterRegex": "[0-9:A-Za-z ]",
           "type": "font",
+          "name": "FONT_BOTW_32",
+          "file": "fonts/botw.ttf",
+          "compatibility": "2.7",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "characterRegex": "[0-9:A-Za-z ]",
+          "type": "font",
           "name": "FONT_BOTW_24",
           "file": "fonts/botw.ttf",
-          "compatibility": "2.7"
+          "compatibility": "2.7",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "diorite"
+          ]
         },
         {
           "characterRegex": "[0-9:A-Za-z ]",
           "type": "font",
           "name": "FONT_BOTW_22",
           "file": "fonts/botw.ttf",
-          "compatibility": "2.7"
+          "compatibility": "2.7",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "diorite"
+          ]
         },
         {
           "characterRegex": "[0-9:A-Za-z .!?]",
           "type": "font",
           "name": "FONT_SHEIKAH_RUNES_16",
           "file": "fonts/sheikahrunes-small.ttf",
-          "compatibility": "2.7"
+          "compatibility": "2.7",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "diorite"
+          ]
         },
         {
           "type": "bitmap",
