@@ -1,20 +1,20 @@
-# project  configured on Thu Jan 23 12:02:27 2020 by
-# waf 1.7.11 (abi 98, python 20711f0 on linux2)
-# using /home/hmallen/.pebble-sdk/SDKs/current/sdk-core/pebble/waf configure
+# project  configured on Tue May  4 16:59:20 2021 by
+# waf 1.7.11 (abi 98, python 20712f0 on linux2)
+# using /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/waf configure
 #
 ----------------------------------------
 Setting top to
-/mnt/d/Pebble/dev_folder/SheikahSlate_PebbleWatchface/sheikah_slate
+/mnt/c/Users/harri/Documents/pebble/SheikahSlate_PebbleWatchface/sheikah_slate
 ----------------------------------------
 Setting out to
-/mnt/d/Pebble/dev_folder/sheikahslate_pebblewatchface/sheikah_slate/build
+/mnt/c/Users/harri/Documents/pebble/SheikahSlate_PebbleWatchface/sheikah_slate/build
 ----------------------------------------
 Checking for program webpack
-/home/hmallen/.pebble-sdk/SDKs/current/node_modules/.bin/webpack
-find program=['webpack'] paths=['/home/hmallen/.pebble-sdk/SDKs/current/node_modules/.bin'] var='WEBPACK' -> '/home/hmallen/.pebble-sdk/SDKs/current/node_modules/.bin/webpack'
+/home/linksky/.pebble-sdk/SDKs/current/node_modules/.bin/webpack
+find program=['webpack'] paths=['/home/linksky/.pebble-sdk/SDKs/current/node_modules/.bin'] var='WEBPACK' -> '/home/linksky/.pebble-sdk/SDKs/current/node_modules/.bin/webpack'
 ----------------------------------------
 Found Pebble SDK for diorite in:
-/home/hmallen/.pebble-sdk/SDKs/current/sdk-core/pebble/diorite
+/home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/diorite
 ----------------------------------------
 Checking for program gcc,cc
 arm-none-eabi-gcc
@@ -25,7 +25,7 @@ arm-none-eabi-ar
 find program=['ar'] paths='' var='AR' -> 'arm-none-eabi-ar'
 ----------------------------------------
 Found Pebble SDK for basalt in:
-/home/hmallen/.pebble-sdk/SDKs/current/sdk-core/pebble/basalt
+/home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/basalt
 ----------------------------------------
 Checking for program gcc,cc
 arm-none-eabi-gcc
@@ -36,7 +36,7 @@ arm-none-eabi-ar
 find program=['ar'] paths='' var='AR' -> 'arm-none-eabi-ar'
 ----------------------------------------
 Found Pebble SDK for aplite in:
-/home/hmallen/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite
+/home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite
 ----------------------------------------
 Checking for program gcc,cc
 arm-none-eabi-gcc

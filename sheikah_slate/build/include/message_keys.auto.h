@@ -22,4 +22,5 @@ extern uint32_t MESSAGE_KEY_Temperature3;
 extern uint32_t MESSAGE_KEY_Temperature4;
 extern uint32_t MESSAGE_KEY_TemperatureMetric;
 extern uint32_t MESSAGE_KEY_UseCurrentLocation;
+extern uint32_t MESSAGE_KEY_VibrateOnDisc;
 extern uint32_t MESSAGE_KEY_WeatherCheckRate;

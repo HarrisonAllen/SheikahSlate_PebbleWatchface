@@ -67,6 +67,7 @@ typedef struct ClaySettings {
   int TEMPERATURE;                 // Current temperature
   Weather CONDITIONS;              // Current weather conditions
   bool AmericanDate;               // use American date format (Jan 01)?
+  bool VibrateOnDisc;              // vibrate on bluetooth disconnect?
 } ClaySettings;
 
 static ClaySettings settings;
@@ -298,13 +299,11 @@ static void battery_callback(BatteryChargeState state) {
 static void battery_update_proc(Layer *layer, GContext *ctx) {
   GRect bounds = layer_get_bounds(layer);
   uint8_t cur_battery = DEMO_MODE ? DEMO_BATTERY : s_battery_level;
-  APP_LOG(APP_LOG_LEVEL_INFO, "Battery Level: %d", cur_battery);
   GColor curColor = PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0x00FF00)); // green when battery is healthy
   if (cur_battery <= 10){ // red when running out of "stamina"
     curColor = PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0xFF0000));
   }
-  bool charging = s_charging || (DEMO_MODE && DEMO_CHARGING);
-  APP_LOG(APP_LOG_LEVEL_INFO, "Charging: %s", charging ? "yes" : "no");
+  bool charging = DEMO_MODE ? DEMO_CHARGING : s_charging;
   if (charging){ // yellow when charging (values are weird when charging tho)
     curColor = PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0xFFFF00));
   }
@@ -392,11 +391,12 @@ static void bluetooth_callback(bool connected) {
     connected = DEMO_BLUETOOTH;
   }
 
-  APP_LOG(APP_LOG_LEVEL_INFO, "Connected: %s", connected ? "yes" : "no");
   bitmap_layer_set_bitmap(s_bt_icon_layer, connected ? s_bt_icon_bitmap_conn : s_bt_icon_bitmap_disc);
 
   if (!connected) {
-    vibes_double_pulse();
+    if (settings.VibrateOnDisc) {
+      vibes_double_pulse();
+    }
     if (!s_splash_anim_started && s_date_set){
       init_splash_anim();
     }
@@ -454,6 +454,7 @@ static void default_settings() {
   settings.TEMPERATURE = rand()%120;              // mystery temperature
   settings.CONDITIONS = rand()%NUM_WEATHER_ICONS; // mystery weather
   settings.AmericanDate = true;                   // Jan 01 by default
+  settings.VibrateOnDisc = true;                  // vibrate by default
 }
 
 // Pick the next rune to display
@@ -648,9 +649,7 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
   // if weather data is available, use it
   if (DEMO_MODE) {
     settings.TEMPERATURE = DEMO_TEMPERATURE;
-    APP_LOG(APP_LOG_LEVEL_INFO, "Temperature: %d", settings.TEMPERATURE);
     settings.CONDITIONS = DEMO_CONDITIONS;
-    APP_LOG(APP_LOG_LEVEL_INFO, "Weather Conditions: %d", settings.CONDITIONS);
     if (s_date_set && !s_weather_loaded && !s_splash_anim_started) {
       init_splash_anim();
     }
@@ -674,6 +673,11 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
   Tuple *american_date_t = dict_find(iterator, MESSAGE_KEY_AmericanDate);
   if(american_date_t) {
     settings.AmericanDate = american_date_t->value->int32 == 1;
+  }
+
+  Tuple *vibrate_on_disc_t = dict_find(iterator, MESSAGE_KEY_VibrateOnDisc);
+  if(vibrate_on_disc_t) {
+    settings.VibrateOnDisc = vibrate_on_disc_t->value->int32 == 1;
   }
 
   save_settings(); // save the new settings! Current weather included

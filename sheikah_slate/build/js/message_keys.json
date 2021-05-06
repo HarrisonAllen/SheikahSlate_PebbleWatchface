@@ -15,5 +15,6 @@
     "Temperature4": 10021,
     "TemperatureMetric": 10016,
     "UseCurrentLocation": 10013,
+    "VibrateOnDisc": 10023,
     "WeatherCheckRate": 10012
 }

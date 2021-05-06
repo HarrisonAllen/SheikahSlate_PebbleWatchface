@@ -9,6 +9,7 @@
     "messageKeys": {
         "RightColumnText": 10010, 
         "TemperatureMetric": 10016, 
+        "VibrateOnDisc": 10023, 
         "TEMPERATURE": 10007, 
         "AmericanDate": 10022, 
         "UseCurrentLocation": 10013, 
@@ -27,7 +28,7 @@
     }, 
     "companyName": "Harrison Allen", 
     "enableMultiJS": true, 
-    "versionLabel": "1.0", 
+    "versionLabel": "1.1", 
     "capabilities": [
         "configurable"
     ], 
@@ -35,6 +36,7 @@
     "appKeys": {
         "RightColumnText": 10010, 
         "TemperatureMetric": 10016, 
+        "VibrateOnDisc": 10023, 
         "TEMPERATURE": 10007, 
         "AmericanDate": 10022, 
         "UseCurrentLocation": 10013, 

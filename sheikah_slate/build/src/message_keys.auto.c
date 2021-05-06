@@ -22,4 +22,5 @@ uint32_t MESSAGE_KEY_Temperature3 = 10020;
 uint32_t MESSAGE_KEY_Temperature4 = 10021;
 uint32_t MESSAGE_KEY_TemperatureMetric = 10016;
 uint32_t MESSAGE_KEY_UseCurrentLocation = 10013;
+uint32_t MESSAGE_KEY_VibrateOnDisc = 10023;
 uint32_t MESSAGE_KEY_WeatherCheckRate = 10012;
