@@ -2,6 +2,7 @@
     "targetPlatforms": [
         "aplite", 
         "basalt", 
+        "chalk", 
         "diorite"
     ], 
     "displayName": "Sheikah Slate", 
@@ -28,7 +29,7 @@
     }, 
     "companyName": "Harrison Allen", 
     "enableMultiJS": true, 
-    "versionLabel": "1.1", 
+    "versionLabel": "2.0", 
     "capabilities": [
         "configurable"
     ], 
@@ -60,24 +61,49 @@
     "resources": {
         "media": [
             {
+                "targetPlatforms": [
+                    "chalk"
+                ], 
+                "name": "FONT_BOTW_32", 
                 "characterRegex": "[0-9:A-Za-z ]", 
+                "file": "fonts/botw.ttf", 
                 "type": "font", 
+                "compatibility": "2.7"
+            }, 
+            {
+                "targetPlatforms": [
+                    "aplite", 
+                    "basalt", 
+                    "diorite"
+                ], 
                 "name": "FONT_BOTW_24", 
-                "file": "fonts/botw.ttf", 
-                "compatibility": "2.7"
-            }, 
-            {
                 "characterRegex": "[0-9:A-Za-z ]", 
-                "type": "font", 
-                "name": "FONT_BOTW_22", 
                 "file": "fonts/botw.ttf", 
+                "type": "font", 
                 "compatibility": "2.7"
             }, 
             {
-                "characterRegex": "[0-9:A-Za-z .!?]", 
+                "targetPlatforms": [
+                    "aplite", 
+                    "basalt", 
+                    "diorite"
+                ], 
+                "name": "FONT_BOTW_22", 
+                "characterRegex": "[0-9:A-Za-z ]", 
+                "file": "fonts/botw.ttf", 
                 "type": "font", 
+                "compatibility": "2.7"
+            }, 
+            {
+                "targetPlatforms": [
+                    "aplite", 
+                    "basalt", 
+                    "diorite"
+                ], 
                 "name": "FONT_SHEIKAH_RUNES_16", 
+                "characterRegex": "[0-9:A-Za-z .!?]", 
                 "file": "fonts/sheikahrunes-small.ttf", 
+                "type": "font", 
                 "compatibility": "2.7"
             }, 
             {

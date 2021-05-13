@@ -1,4 +1,4 @@
-# project  configured on Tue May  4 16:59:20 2021 by
+# project  configured on Thu May 13 00:13:26 2021 by
 # waf 1.7.11 (abi 98, python 20712f0 on linux2)
 # using /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/waf configure
 #
@@ -15,6 +15,17 @@ find program=['webpack'] paths=['/home/linksky/.pebble-sdk/SDKs/current/node_mod
 ----------------------------------------
 Found Pebble SDK for diorite in:
 /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/diorite
+----------------------------------------
+Checking for program gcc,cc
+arm-none-eabi-gcc
+find program=['gcc', 'cc'] paths='' var='CC' -> 'arm-none-eabi-gcc'
+----------------------------------------
+Checking for program ar
+arm-none-eabi-ar
+find program=['ar'] paths='' var='AR' -> 'arm-none-eabi-ar'
+----------------------------------------
+Found Pebble SDK for chalk in:
+/home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/chalk
 ----------------------------------------
 Checking for program gcc,cc
 arm-none-eabi-gcc

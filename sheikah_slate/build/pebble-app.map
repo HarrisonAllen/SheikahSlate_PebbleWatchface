@@ -1,17 +1,17 @@
 Archive member included because of file (symbol)
 
 /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                              src/c/sheikah_slate.c.25.o (app_event_loop)
+                              src/c/sheikah_slate.c.33.o (app_event_loop)
 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
-                              src/c/sheikah_slate.c.25.o (__aeabi_dsub)
+                              src/c/sheikah_slate.c.33.o (__aeabi_dsub)
 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
-                              src/c/sheikah_slate.c.25.o (__aeabi_dmul)
+                              src/c/sheikah_slate.c.33.o (__aeabi_dmul)
 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
-                              src/c/sheikah_slate.c.25.o (__aeabi_d2iz)
+                              src/c/sheikah_slate.c.33.o (__aeabi_d2iz)
 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
-                              src/c/sheikah_slate.c.25.o (__aeabi_i2f)
+                              src/c/sheikah_slate.c.33.o (__aeabi_i2f)
 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
-                              src/c/sheikah_slate.c.25.o (__aeabi_fmul)
+                              src/c/sheikah_slate.c.33.o (__aeabi_fmul)
 
 Discarded input sections
 
@@ -27,58 +27,58 @@ Discarded input sections
  .jcr           0x0000000000000000        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .tm_clone_table
                 0x0000000000000000        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
- .text          0x0000000000000000        0x0 src/c/sheikah_slate.c.25.o
- .bss           0x0000000000000000        0x0 src/c/sheikah_slate.c.25.o
- .text          0x0000000000000000        0x0 aplite/appinfo.auto.c.25.o
- .bss           0x0000000000000000        0x0 aplite/appinfo.auto.c.25.o
- .text          0x0000000000000000        0x0 aplite/src/resource_ids.auto.c.25.o
- .bss           0x0000000000000000        0x0 aplite/src/resource_ids.auto.c.25.o
+ .text          0x0000000000000000        0x0 src/c/sheikah_slate.c.33.o
+ .bss           0x0000000000000000        0x0 src/c/sheikah_slate.c.33.o
+ .text          0x0000000000000000        0x0 aplite/appinfo.auto.c.33.o
+ .bss           0x0000000000000000        0x0 aplite/appinfo.auto.c.33.o
+ .text          0x0000000000000000        0x0 aplite/src/resource_ids.auto.c.33.o
+ .bss           0x0000000000000000        0x0 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_WEATHER_STORMY
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_SPLASH_RIGHT
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_WEATHER_PARTLYCLOUDY
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_SPLASH_EYE_RIGHT
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_RUNE_CRYONIS
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_RUNE_MAGNESIS
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_WEATHER_SNOWY
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_WEATHER_CLOUDY
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_FONT_BOTW_22
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_RUNE_CYCLE
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_RUNE_BOMB_ROUND
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_FONT_SHEIKAH_RUNES_16
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_BT_DISC
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_WEATHER_SUNNY
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_SPLASH_EYE_LEFT
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_SPLASH_LEFT
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_RUNE_BOMB_SQUARE
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_FONT_BOTW_24
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_RUNE_CAMERA
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_RUNE_STASIS
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_BT_CONN
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
  .data.RESOURCE_ID_IMAGE_WEATHER_RAINY
-                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
- .text          0x0000000000000000        0x0 src/message_keys.auto.c.25.o
- .bss           0x0000000000000000        0x0 src/message_keys.auto.c.25.o
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.33.o
+ .text          0x0000000000000000        0x0 src/message_keys.auto.c.33.o
+ .bss           0x0000000000000000        0x0 src/message_keys.auto.c.33.o
  .bss           0x0000000000000000        0x0 /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.accel_data_service_subscribe__deprecated
                 0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
@@ -636,8 +636,6 @@ Discarded input sections
                 0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.graphics_frame_buffer_is_captured
                 0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
- .text.graphics_release_frame_buffer
-                0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.clock_to_timestamp
                 0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.launch_reason
@@ -708,8 +706,6 @@ Discarded input sections
  .text.animation_unschedule_all
                 0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.gbitmap_create_blank
-                0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
- .text.graphics_capture_frame_buffer
                 0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.graphics_capture_frame_buffer_format
                 0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
@@ -1034,8 +1030,6 @@ Discarded input sections
                 0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.dictation_session_enable_error_dialogs
                 0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
- .text.gbitmap_get_data_row_info
-                0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.content_indicator_configure_direction
                 0x0000000000000000        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.content_indicator_create
@@ -1140,10 +1134,10 @@ Linker script and memory map
 
 LOAD /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
 LOAD /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-LOAD src/c/sheikah_slate.c.25.o
-LOAD aplite/appinfo.auto.c.25.o
-LOAD aplite/src/resource_ids.auto.c.25.o
-LOAD src/message_keys.auto.c.25.o
+LOAD src/c/sheikah_slate.c.33.o
+LOAD aplite/appinfo.auto.c.33.o
+LOAD aplite/src/resource_ids.auto.c.33.o
+LOAD src/message_keys.auto.c.33.o
 LOAD /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a
 LOAD /mnt/c/Users/harri/Documents/pebble/SheikahSlate_PebbleWatchface/sheikah_slate/node_modules/pebble-clay/dist/binaries/aplite/libpebble-clay.a
 START GROUP
@@ -1155,7 +1149,7 @@ LOAD /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc
 
 .header         0x0000000000000000       0x82
  *(.pbl_header)
- .pbl_header    0x0000000000000000       0x82 aplite/appinfo.auto.c.25.o
+ .pbl_header    0x0000000000000000       0x82 aplite/appinfo.auto.c.33.o
                 0x0000000000000000                __pbl_app_info
 
 .note.gnu.build-id
@@ -1166,7 +1160,7 @@ LOAD /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc
  .note.gnu.build-id
                 0x0000000000000084       0x24 linker stubs
 
-.text           0x00000000000000a8     0x2af0
+.text           0x00000000000000a8     0x2a28
  *(.text)
  .text          0x00000000000000a8       0x14 /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text          0x00000000000000bc      0x370 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
@@ -1213,484 +1207,493 @@ LOAD /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc
                 0x0000000000000c24                __divsf3
                 0x0000000000000c24                __aeabi_fdiv
  *(.text.*)
- .text.set_column_text
-                0x0000000000000d5c       0x32 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000000d8e        0x2 
- .text.init_splash_anim
-                0x0000000000000d90       0x24 src/c/sheikah_slate.c.25.o
- .text.splash_timeout
-                0x0000000000000db4       0x14 src/c/sheikah_slate.c.25.o
- .text.set_column_random
-                0x0000000000000dc8       0x28 src/c/sheikah_slate.c.25.o
- .text.update_time
-                0x0000000000000df0       0x54 src/c/sheikah_slate.c.25.o
- .text.outbox_sent_callback
-                0x0000000000000e44       0x1c src/c/sheikah_slate.c.25.o
- .text.outbox_failed_callback
-                0x0000000000000e60       0x1c src/c/sheikah_slate.c.25.o
- .text.inbox_dropped_callback
-                0x0000000000000e7c       0x1c src/c/sheikah_slate.c.25.o
- .text.request_weather
-                0x0000000000000e98       0x70 src/c/sheikah_slate.c.25.o
- .text.battery_callback
-                0x0000000000000f08       0x2c src/c/sheikah_slate.c.25.o
- .text.pick_new_rune
-                0x0000000000000f34       0xa0 src/c/sheikah_slate.c.25.o
- .text.update_display
-                0x0000000000000fd4       0x84 src/c/sheikah_slate.c.25.o
- .text.inbox_received_callback
-                0x0000000000001058      0x31c src/c/sheikah_slate.c.25.o
- .text.main_window_unload
-                0x0000000000001374      0x184 src/c/sheikah_slate.c.25.o
- .text.battery_update_proc
-                0x00000000000014f8       0x78 src/c/sheikah_slate.c.25.o
- .text.temperature_update_proc
-                0x0000000000001570      0x254 src/c/sheikah_slate.c.25.o
  .text.draw_fringes
-                0x00000000000017c4      0x24c src/c/sheikah_slate.c.25.o
+                0x0000000000000d5c        0x2 src/c/sheikah_slate.c.33.o
+ .text.set_column_text
+                0x0000000000000d5e       0x32 src/c/sheikah_slate.c.33.o
+ .text.init_splash_anim
+                0x0000000000000d90       0x24 src/c/sheikah_slate.c.33.o
+ .text.splash_timeout
+                0x0000000000000db4       0x14 src/c/sheikah_slate.c.33.o
+ .text.set_column_random
+                0x0000000000000dc8       0x28 src/c/sheikah_slate.c.33.o
+ .text.update_time
+                0x0000000000000df0       0x54 src/c/sheikah_slate.c.33.o
+ .text.outbox_sent_callback
+                0x0000000000000e44       0x1c src/c/sheikah_slate.c.33.o
+ .text.outbox_failed_callback
+                0x0000000000000e60       0x1c src/c/sheikah_slate.c.33.o
+ .text.inbox_dropped_callback
+                0x0000000000000e7c       0x1c src/c/sheikah_slate.c.33.o
+ .text.request_weather
+                0x0000000000000e98       0x70 src/c/sheikah_slate.c.33.o
+ .text.battery_callback
+                0x0000000000000f08       0x2c src/c/sheikah_slate.c.33.o
+ .text.pick_new_rune
+                0x0000000000000f34       0xa0 src/c/sheikah_slate.c.33.o
+ .text.update_display
+                0x0000000000000fd4       0x84 src/c/sheikah_slate.c.33.o
+ .text.inbox_received_callback
+                0x0000000000001058      0x31c src/c/sheikah_slate.c.33.o
+ .text.main_window_unload
+                0x0000000000001374      0x1a8 src/c/sheikah_slate.c.33.o
+ .text.temperature_update_proc
+                0x000000000000151c      0x288 src/c/sheikah_slate.c.33.o
+ .text.dither   0x00000000000017a4       0x98 src/c/sheikah_slate.c.33.o
+ .text.battery_update_proc
+                0x000000000000183c       0xc0 src/c/sheikah_slate.c.33.o
  .text.bluetooth_callback
-                0x0000000000001a10       0x60 src/c/sheikah_slate.c.25.o
+                0x00000000000018fc       0x60 src/c/sheikah_slate.c.33.o
  .text.main_window_load
-                0x0000000000001a70      0x530 src/c/sheikah_slate.c.25.o
+                0x000000000000195c      0x554 src/c/sheikah_slate.c.33.o
  .text.tick_handler
-                0x0000000000001fa0       0xfc src/c/sheikah_slate.c.25.o
+                0x0000000000001eb0       0xfc src/c/sheikah_slate.c.33.o
  .text.move_bitmap.constprop.2
-                0x000000000000209c       0x2e src/c/sheikah_slate.c.25.o
- *fill*         0x00000000000020ca        0x2 
+                0x0000000000001fac       0x2e src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000001fda        0x2 
  .text.splash_anim_handler
-                0x00000000000020cc      0x188 src/c/sheikah_slate.c.25.o
+                0x0000000000001fdc      0x188 src/c/sheikah_slate.c.33.o
  .text.draw_frame
-                0x0000000000002254      0x2dc src/c/sheikah_slate.c.25.o
+                0x0000000000002164      0x2e0 src/c/sheikah_slate.c.33.o
  .text.startup.main
-                0x0000000000002530      0x1c0 src/c/sheikah_slate.c.25.o
-                0x0000000000002530                main
+                0x0000000000002444      0x1c0 src/c/sheikah_slate.c.33.o
+                0x0000000000002444                main
  .text.app_event_loop
-                0x00000000000026f0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000026f0                app_event_loop
- .text.app_log  0x00000000000026fc        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000026fc                app_log
+                0x0000000000002604        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002604                app_event_loop
+ .text.app_log  0x0000000000002610        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002610                app_log
  .text.app_message_open
-                0x0000000000002708        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002708                app_message_open
+                0x000000000000261c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000261c                app_message_open
  .text.app_timer_register
-                0x0000000000002714        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002714                app_timer_register
- .text.atoi     0x0000000000002720        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002720                atoi
+                0x0000000000002628        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002628                app_timer_register
+ .text.atoi     0x0000000000002634        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002634                atoi
  .text.battery_state_service_peek
-                0x000000000000272c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000272c                battery_state_service_peek
+                0x0000000000002640        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002640                battery_state_service_peek
  .text.battery_state_service_subscribe
-                0x0000000000002738        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002738                battery_state_service_subscribe
+                0x000000000000264c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000264c                battery_state_service_subscribe
  .text.bitmap_layer_create
-                0x0000000000002744        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002744                bitmap_layer_create
+                0x0000000000002658        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002658                bitmap_layer_create
  .text.bitmap_layer_destroy
-                0x0000000000002750        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002750                bitmap_layer_destroy
+                0x0000000000002664        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002664                bitmap_layer_destroy
  .text.bitmap_layer_get_layer
-                0x000000000000275c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000275c                bitmap_layer_get_layer
+                0x0000000000002670        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002670                bitmap_layer_get_layer
  .text.bitmap_layer_set_bitmap
-                0x0000000000002768        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002768                bitmap_layer_set_bitmap
+                0x000000000000267c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000267c                bitmap_layer_set_bitmap
  .text.bitmap_layer_set_compositing_mode
-                0x0000000000002774        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002774                bitmap_layer_set_compositing_mode
+                0x0000000000002688        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002688                bitmap_layer_set_compositing_mode
  .text.clock_is_24h_style
-                0x0000000000002780        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002780                clock_is_24h_style
+                0x0000000000002694        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002694                clock_is_24h_style
  .text.dict_find
-                0x000000000000278c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000278c                dict_find
+                0x00000000000026a0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000026a0                dict_find
  .text.dict_write_cstring
-                0x0000000000002798        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002798                dict_write_cstring
+                0x00000000000026ac        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000026ac                dict_write_cstring
  .text.dict_write_uint8
-                0x00000000000027a4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000027a4                dict_write_uint8
+                0x00000000000026b8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000026b8                dict_write_uint8
  .text.fonts_load_custom_font
-                0x00000000000027b0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000027b0                fonts_load_custom_font
+                0x00000000000026c4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000026c4                fonts_load_custom_font
  .text.fonts_unload_custom_font
-                0x00000000000027bc        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000027bc                fonts_unload_custom_font
+                0x00000000000026d0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000026d0                fonts_unload_custom_font
  .text.gbitmap_create_with_resource
-                0x00000000000027c8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000027c8                gbitmap_create_with_resource
+                0x00000000000026dc        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000026dc                gbitmap_create_with_resource
  .text.gbitmap_destroy
-                0x00000000000027d4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000027d4                gbitmap_destroy
+                0x00000000000026e8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000026e8                gbitmap_destroy
  .text.graphics_draw_line
-                0x00000000000027e0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000027e0                graphics_draw_line
+                0x00000000000026f4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000026f4                graphics_draw_line
  .text.graphics_draw_pixel
-                0x00000000000027ec        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000027ec                graphics_draw_pixel
+                0x0000000000002700        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002700                graphics_draw_pixel
  .text.graphics_draw_rect
-                0x00000000000027f8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000027f8                graphics_draw_rect
+                0x000000000000270c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000270c                graphics_draw_rect
  .text.graphics_fill_circle
-                0x0000000000002804        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002804                graphics_fill_circle
+                0x0000000000002718        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002718                graphics_fill_circle
  .text.grect_center_point
-                0x0000000000002810        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002810                grect_center_point
+                0x0000000000002724        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002724                grect_center_point
  .text.grect_crop
-                0x000000000000281c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000281c                grect_crop
+                0x0000000000002730        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002730                grect_crop
  .text.layer_add_child
-                0x0000000000002828        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002828                layer_add_child
+                0x000000000000273c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000273c                layer_add_child
  .text.layer_create
-                0x0000000000002834        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002834                layer_create
+                0x0000000000002748        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002748                layer_create
  .text.layer_destroy
-                0x0000000000002840        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002840                layer_destroy
+                0x0000000000002754        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002754                layer_destroy
  .text.layer_get_bounds
-                0x000000000000284c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000284c                layer_get_bounds
+                0x0000000000002760        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002760                layer_get_bounds
  .text.layer_get_frame
-                0x0000000000002858        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002858                layer_get_frame
+                0x000000000000276c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000276c                layer_get_frame
  .text.layer_mark_dirty
-                0x0000000000002864        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002864                layer_mark_dirty
+                0x0000000000002778        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002778                layer_mark_dirty
  .text.layer_set_frame
-                0x0000000000002870        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002870                layer_set_frame
+                0x0000000000002784        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002784                layer_set_frame
  .text.layer_set_update_proc
-                0x000000000000287c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000287c                layer_set_update_proc
- .text.memset   0x0000000000002888        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002888                memset
- .text.rand     0x0000000000002894        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002894                rand
+                0x0000000000002790        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002790                layer_set_update_proc
+ .text.memset   0x000000000000279c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000279c                memset
+ .text.rand     0x00000000000027a8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000027a8                rand
  .text.resource_get_handle
-                0x00000000000028a0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000028a0                resource_get_handle
- .text.strcpy   0x00000000000028ac        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000028ac                strcpy
+                0x00000000000027b4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000027b4                resource_get_handle
+ .text.strcpy   0x00000000000027c0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000027c0                strcpy
  .text.strftime
-                0x00000000000028b8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000028b8                strftime
+                0x00000000000027cc        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000027cc                strftime
  .text.tick_timer_service_subscribe
-                0x00000000000028c4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000028c4                tick_timer_service_subscribe
+                0x00000000000027d8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000027d8                tick_timer_service_subscribe
  .text.vibes_double_pulse
-                0x00000000000028d0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000028d0                vibes_double_pulse
+                0x00000000000027e4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000027e4                vibes_double_pulse
  .text.window_create
-                0x00000000000028dc        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000028dc                window_create
+                0x00000000000027f0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000027f0                window_create
  .text.window_destroy
-                0x00000000000028e8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000028e8                window_destroy
+                0x00000000000027fc        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000027fc                window_destroy
  .text.window_get_root_layer
-                0x00000000000028f4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000028f4                window_get_root_layer
+                0x0000000000002808        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002808                window_get_root_layer
  .text.window_set_window_handlers
-                0x0000000000002900        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002900                window_set_window_handlers
+                0x0000000000002814        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002814                window_set_window_handlers
  .text.window_stack_push
-                0x000000000000290c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000290c                window_stack_push
+                0x0000000000002820        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002820                window_stack_push
  .text.app_message_outbox_begin
-                0x0000000000002918        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002918                app_message_outbox_begin
+                0x000000000000282c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000282c                app_message_outbox_begin
  .text.app_message_outbox_send
-                0x0000000000002924        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002924                app_message_outbox_send
+                0x0000000000002838        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002838                app_message_outbox_send
  .text.app_message_register_inbox_dropped
-                0x0000000000002930        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002930                app_message_register_inbox_dropped
+                0x0000000000002844        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002844                app_message_register_inbox_dropped
  .text.app_message_register_inbox_received
-                0x000000000000293c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000293c                app_message_register_inbox_received
+                0x0000000000002850        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002850                app_message_register_inbox_received
  .text.app_message_register_outbox_failed
-                0x0000000000002948        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002948                app_message_register_outbox_failed
+                0x000000000000285c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000285c                app_message_register_outbox_failed
  .text.app_message_register_outbox_sent
-                0x0000000000002954        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002954                app_message_register_outbox_sent
+                0x0000000000002868        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002868                app_message_register_outbox_sent
  .text.persist_read_data
-                0x0000000000002960        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002960                persist_read_data
+                0x0000000000002874        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002874                persist_read_data
  .text.persist_write_data
-                0x000000000000296c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000296c                persist_write_data
+                0x0000000000002880        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002880                persist_write_data
+ .text.graphics_release_frame_buffer
+                0x000000000000288c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000288c                graphics_release_frame_buffer
  .text.graphics_context_set_fill_color
-                0x0000000000002978        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002978                graphics_context_set_fill_color
+                0x0000000000002898        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002898                graphics_context_set_fill_color
  .text.graphics_context_set_stroke_color
-                0x0000000000002984        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002984                graphics_context_set_stroke_color
+                0x00000000000028a4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000028a4                graphics_context_set_stroke_color
  .text.window_set_background_color
-                0x0000000000002990        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002990                window_set_background_color
+                0x00000000000028b0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000028b0                window_set_background_color
  .text.localtime
-                0x000000000000299c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000299c                localtime
+                0x00000000000028bc        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000028bc                localtime
+ .text.graphics_capture_frame_buffer
+                0x00000000000028c8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000028c8                graphics_capture_frame_buffer
  .text.graphics_context_set_stroke_width
-                0x00000000000029a8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000029a8                graphics_context_set_stroke_width
+                0x00000000000028d4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000028d4                graphics_context_set_stroke_width
  .text.text_layer_create
-                0x00000000000029b4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000029b4                text_layer_create
+                0x00000000000028e0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000028e0                text_layer_create
  .text.text_layer_destroy
-                0x00000000000029c0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000029c0                text_layer_destroy
+                0x00000000000028ec        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000028ec                text_layer_destroy
  .text.text_layer_get_layer
-                0x00000000000029cc        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000029cc                text_layer_get_layer
+                0x00000000000028f8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000028f8                text_layer_get_layer
  .text.text_layer_set_background_color
-                0x00000000000029d8        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000029d8                text_layer_set_background_color
+                0x0000000000002904        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002904                text_layer_set_background_color
  .text.text_layer_set_font
-                0x00000000000029e4        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000029e4                text_layer_set_font
+                0x0000000000002910        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002910                text_layer_set_font
  .text.text_layer_set_overflow_mode
-                0x00000000000029f0        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000029f0                text_layer_set_overflow_mode
+                0x000000000000291c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000291c                text_layer_set_overflow_mode
  .text.text_layer_set_text
-                0x00000000000029fc        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000029fc                text_layer_set_text
+                0x0000000000002928        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002928                text_layer_set_text
  .text.text_layer_set_text_alignment
-                0x0000000000002a08        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002a08                text_layer_set_text_alignment
+                0x0000000000002934        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002934                text_layer_set_text_alignment
  .text.text_layer_set_text_color
-                0x0000000000002a14        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002a14                text_layer_set_text_color
- .text.time     0x0000000000002a20        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002a20                time
+                0x0000000000002940        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002940                text_layer_set_text_color
+ .text.time     0x000000000000294c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000294c                time
  .text.connection_service_peek_pebble_app_connection
-                0x0000000000002a2c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002a2c                connection_service_peek_pebble_app_connection
+                0x0000000000002958        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002958                connection_service_peek_pebble_app_connection
  .text.connection_service_subscribe
-                0x0000000000002a38        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002a38                connection_service_subscribe
+                0x0000000000002964        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002964                connection_service_subscribe
+ .text.gbitmap_get_data_row_info
+                0x0000000000002970        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002970                gbitmap_get_data_row_info
  .text.gpoint_from_polar
-                0x0000000000002a44        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002a44                gpoint_from_polar
+                0x000000000000297c        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000297c                gpoint_from_polar
  .text.graphics_fill_radial
-                0x0000000000002a50        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000002a50                graphics_fill_radial
+                0x0000000000002988        0xc /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000002988                graphics_fill_radial
  *(.rodata)
- .rodata        0x0000000000002a5c       0x60 src/c/sheikah_slate.c.25.o
+ .rodata        0x0000000000002994       0x60 src/c/sheikah_slate.c.33.o
  *(.rodata*)
  .rodata.bottom_right
-                0x0000000000002abc        0x9 src/c/sheikah_slate.c.25.o
+                0x00000000000029f4        0x9 src/c/sheikah_slate.c.33.o
  .rodata.top_left
-                0x0000000000002ac5        0x9 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000002ace        0x2 
- .rodata.RUNES  0x0000000000002ad0       0x1c src/c/sheikah_slate.c.25.o
+                0x00000000000029fd        0x9 src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000002a06        0x2 
+ .rodata.RUNES  0x0000000000002a08       0x1c src/c/sheikah_slate.c.33.o
  .rodata.WEATHER_ICONS
-                0x0000000000002aec       0x18 src/c/sheikah_slate.c.25.o
+                0x0000000000002a24       0x18 src/c/sheikah_slate.c.33.o
  .rodata.TEMP_ANGLE_NOTCHES
-                0x0000000000002b04       0x14 src/c/sheikah_slate.c.25.o
+                0x0000000000002a3c       0x14 src/c/sheikah_slate.c.33.o
  .rodata.top_right
-                0x0000000000002b18        0x9 src/c/sheikah_slate.c.25.o
+                0x0000000000002a50        0x9 src/c/sheikah_slate.c.33.o
  .rodata.bottom_left
-                0x0000000000002b21        0x9 src/c/sheikah_slate.c.25.o
+                0x0000000000002a59        0x9 src/c/sheikah_slate.c.33.o
  .rodata.str1.1
-                0x0000000000002b2a       0x6e src/c/sheikah_slate.c.25.o
+                0x0000000000002a62       0x6e src/c/sheikah_slate.c.33.o
 
-.glue_7         0x0000000000002b98        0x0
+.glue_7         0x0000000000002ad0        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x0000000000002b98        0x0
+.glue_7t        0x0000000000002ad0        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000002b98        0x0
+.vfp11_veneer   0x0000000000002ad0        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000002b98        0x0
+.v4_bx          0x0000000000002ad0        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000002b98        0x0
+.iplt           0x0000000000002ad0        0x0
  .iplt          0x0000000000000000        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.rel.dyn        0x0000000000002b98        0x0
+.rel.dyn        0x0000000000002ad0        0x0
  .rel.iplt      0x0000000000000000        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .rel.got       0x0000000000000000        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.data           0x0000000000002b98       0x60
+.data           0x0000000000002ad0       0x60
  *(.data)
- .data          0x0000000000002b98        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
- .data          0x0000000000002b98        0x4 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x0000000000002b98                __dso_handle
- .data          0x0000000000002b9c        0x0 src/c/sheikah_slate.c.25.o
- .data          0x0000000000002b9c        0x0 aplite/appinfo.auto.c.25.o
- .data          0x0000000000002b9c        0x0 aplite/src/resource_ids.auto.c.25.o
- .data          0x0000000000002b9c        0x0 src/message_keys.auto.c.25.o
- .data          0x0000000000002b9c        0x0 /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
- .data          0x0000000000002b9c        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
- .data          0x0000000000002b9c        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
- .data          0x0000000000002b9c        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
- .data          0x0000000000002b9c        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
- .data          0x0000000000002b9c        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
- .data          0x0000000000002b9c        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
- .data          0x0000000000002b9c        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .data          0x0000000000002ad0        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .data          0x0000000000002ad0        0x4 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x0000000000002ad0                __dso_handle
+ .data          0x0000000000002ad4        0x0 src/c/sheikah_slate.c.33.o
+ .data          0x0000000000002ad4        0x0 aplite/appinfo.auto.c.33.o
+ .data          0x0000000000002ad4        0x0 aplite/src/resource_ids.auto.c.33.o
+ .data          0x0000000000002ad4        0x0 src/message_keys.auto.c.33.o
+ .data          0x0000000000002ad4        0x0 /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .data          0x0000000000002ad4        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
+ .data          0x0000000000002ad4        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
+ .data          0x0000000000002ad4        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
+ .data          0x0000000000002ad4        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
+ .data          0x0000000000002ad4        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
+ .data          0x0000000000002ad4        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .data          0x0000000000002ad4        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
  *(.data.*)
  .data.TEMP_NOTCHES
-                0x0000000000002b9c       0x14 src/c/sheikah_slate.c.25.o
+                0x0000000000002ad4       0x14 src/c/sheikah_slate.c.33.o
  .data.MESSAGE_KEY_RightColumnText
-                0x0000000000002bb0        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bb0                MESSAGE_KEY_RightColumnText
+                0x0000000000002ae8        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002ae8                MESSAGE_KEY_RightColumnText
  .data.MESSAGE_KEY_Latitude
-                0x0000000000002bb4        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bb4                MESSAGE_KEY_Latitude
+                0x0000000000002aec        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002aec                MESSAGE_KEY_Latitude
  .data.MESSAGE_KEY_UseCurrentLocation
-                0x0000000000002bb8        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bb8                MESSAGE_KEY_UseCurrentLocation
+                0x0000000000002af0        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002af0                MESSAGE_KEY_UseCurrentLocation
  .data.MESSAGE_KEY_TemperatureMetric
-                0x0000000000002bbc        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bbc                MESSAGE_KEY_TemperatureMetric
+                0x0000000000002af4        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002af4                MESSAGE_KEY_TemperatureMetric
  .data.MESSAGE_KEY_RunesToChoose
-                0x0000000000002bc0        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bc0                MESSAGE_KEY_RunesToChoose
+                0x0000000000002af8        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002af8                MESSAGE_KEY_RunesToChoose
  .data.MESSAGE_KEY_VibrateOnDisc
-                0x0000000000002bc4        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bc4                MESSAGE_KEY_VibrateOnDisc
+                0x0000000000002afc        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002afc                MESSAGE_KEY_VibrateOnDisc
  .data.MESSAGE_KEY_RuneChangeRate
-                0x0000000000002bc8        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bc8                MESSAGE_KEY_RuneChangeRate
+                0x0000000000002b00        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b00                MESSAGE_KEY_RuneChangeRate
  .data.MESSAGE_KEY_CONDITIONS
-                0x0000000000002bcc        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bcc                MESSAGE_KEY_CONDITIONS
+                0x0000000000002b04        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b04                MESSAGE_KEY_CONDITIONS
  .data.MESSAGE_KEY_LeftColumnText
-                0x0000000000002bd0        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bd0                MESSAGE_KEY_LeftColumnText
+                0x0000000000002b08        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b08                MESSAGE_KEY_LeftColumnText
  .data.MESSAGE_KEY_TEMPERATURE
-                0x0000000000002bd4        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bd4                MESSAGE_KEY_TEMPERATURE
+                0x0000000000002b0c        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b0c                MESSAGE_KEY_TEMPERATURE
  .data.MESSAGE_KEY_Longitude
-                0x0000000000002bd8        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bd8                MESSAGE_KEY_Longitude
+                0x0000000000002b10        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b10                MESSAGE_KEY_Longitude
  .data.MESSAGE_KEY_Temperature0
-                0x0000000000002bdc        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bdc                MESSAGE_KEY_Temperature0
+                0x0000000000002b14        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b14                MESSAGE_KEY_Temperature0
  .data.MESSAGE_KEY_Temperature1
-                0x0000000000002be0        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002be0                MESSAGE_KEY_Temperature1
+                0x0000000000002b18        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b18                MESSAGE_KEY_Temperature1
  .data.MESSAGE_KEY_Temperature2
-                0x0000000000002be4        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002be4                MESSAGE_KEY_Temperature2
+                0x0000000000002b1c        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b1c                MESSAGE_KEY_Temperature2
  .data.MESSAGE_KEY_Temperature3
-                0x0000000000002be8        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002be8                MESSAGE_KEY_Temperature3
+                0x0000000000002b20        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b20                MESSAGE_KEY_Temperature3
  .data.MESSAGE_KEY_Temperature4
-                0x0000000000002bec        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bec                MESSAGE_KEY_Temperature4
+                0x0000000000002b24        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b24                MESSAGE_KEY_Temperature4
  .data.MESSAGE_KEY_AmericanDate
-                0x0000000000002bf0        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bf0                MESSAGE_KEY_AmericanDate
+                0x0000000000002b28        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b28                MESSAGE_KEY_AmericanDate
  .data.MESSAGE_KEY_WeatherCheckRate
-                0x0000000000002bf4        0x4 src/message_keys.auto.c.25.o
-                0x0000000000002bf4                MESSAGE_KEY_WeatherCheckRate
+                0x0000000000002b2c        0x4 src/message_keys.auto.c.33.o
+                0x0000000000002b2c                MESSAGE_KEY_WeatherCheckRate
 
-.igot.plt       0x0000000000002bf8        0x0
+.igot.plt       0x0000000000002b30        0x0
  .igot.plt      0x0000000000000000        0x0 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.got            0x0000000000002bf8       0x48
- .got           0x0000000000002bf8       0x48 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+.got            0x0000000000002b30       0x48
+ .got           0x0000000000002b30       0x48 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.got.plt        0x0000000000002c40        0xc
- .got.plt       0x0000000000002c40        0xc /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x0000000000002c40                _GLOBAL_OFFSET_TABLE_
+.got.plt        0x0000000000002b78        0xc
+ .got.plt       0x0000000000002b78        0xc /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x0000000000002b78                _GLOBAL_OFFSET_TABLE_
 
-.bss            0x0000000000002c4c      0x130
+.bss            0x0000000000002b84      0x130
  *(.bss)
  *(.bss.*)
- .bss.s_buffer.7863
-                0x0000000000002c4c        0x8 src/c/sheikah_slate.c.25.o
- .bss.s_rune_minutes_elapsed
-                0x0000000000002c54        0x1 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000002c55        0x3 
+ .bss.s_date_buffer.7897
+                0x0000000000002b84        0x8 src/c/sheikah_slate.c.33.o
  .bss.s_splash_left_eye_bitmap
-                0x0000000000002c58        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002b8c        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_charging
-                0x0000000000002c5c        0x1 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000002c5d        0x3 
+                0x0000000000002b90        0x1 src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000002b91        0x3 
  .bss.s_bt_icon_bitmap_disc
-                0x0000000000002c60        0x4 src/c/sheikah_slate.c.25.o
- .bss.i.7819    0x0000000000002c64        0x1 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000002c65        0x3 
+                0x0000000000002b94        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_rune_layer
-                0x0000000000002c68        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002b98        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_splash_left_bitmap
-                0x0000000000002c6c        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002b9c        0x4 src/c/sheikah_slate.c.33.o
+ .bss.i.7573    0x0000000000002ba0        0x1 src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000002ba1        0x3 
  .bss.s_sheikah_font
-                0x0000000000002c70        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002ba4        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_date_layer
-                0x0000000000002c74        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002ba8        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_weather_loaded
-                0x0000000000002c78        0x1 src/c/sheikah_slate.c.25.o
+                0x0000000000002bac        0x1 src/c/sheikah_slate.c.33.o
  .bss.s_weather_minutes_elapsed
-                0x0000000000002c79        0x1 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000002c7a        0x2 
- .bss.settings  0x0000000000002c7c       0x8c src/c/sheikah_slate.c.25.o
+                0x0000000000002bad        0x1 src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000002bae        0x2 
+ .bss.settings  0x0000000000002bb0       0x8c src/c/sheikah_slate.c.33.o
  .bss.s_battery_level
-                0x0000000000002d08        0x1 src/c/sheikah_slate.c.25.o
- .bss.s_date_buffer.7867
-                0x0000000000002d09        0x8 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000002d11        0x3 
+                0x0000000000002c3c        0x1 src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000002c3d        0x3 
  .bss.s_fringes_layer
-                0x0000000000002d14        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c40        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_splash_right_layer
-                0x0000000000002d18        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c44        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_time_layer
-                0x0000000000002d1c        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c48        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_bt_icon_bitmap_conn
-                0x0000000000002d20        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c4c        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_main_window
-                0x0000000000002d24        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c50        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_left_column_layer
-                0x0000000000002d28        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c54        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_time_font
-                0x0000000000002d2c        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c58        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_splash_left_eye_layer
-                0x0000000000002d30        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c5c        0x4 src/c/sheikah_slate.c.33.o
+ .bss.i.7835    0x0000000000002c60        0x1 src/c/sheikah_slate.c.33.o
+ .bss.s_buffer.7893
+                0x0000000000002c61        0x8 src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000002c69        0x3 
  .bss.s_battery_layer
-                0x0000000000002d34        0x4 src/c/sheikah_slate.c.25.o
- .bss.i.7806    0x0000000000002d38        0x1 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000002d39        0x3 
+                0x0000000000002c6c        0x4 src/c/sheikah_slate.c.33.o
+ .bss.s_rune_minutes_elapsed
+                0x0000000000002c70        0x1 src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000002c71        0x3 
  .bss.s_weather_icon_bitmap
-                0x0000000000002d3c        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c74        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_rune_bitmap
-                0x0000000000002d40        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c78        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_frame_layer
-                0x0000000000002d44        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c7c        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_cur_frame
-                0x0000000000002d48        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c80        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_splash_right_eye_bitmap
-                0x0000000000002d4c        0x4 src/c/sheikah_slate.c.25.o
- .bss.i.7565    0x0000000000002d50        0x1 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000002d51        0x3 
+                0x0000000000002c84        0x4 src/c/sheikah_slate.c.33.o
+ .bss.i.7848    0x0000000000002c88        0x1 src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000002c89        0x3 
  .bss.s_bt_icon_layer
-                0x0000000000002d54        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c8c        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_splash_left_layer
-                0x0000000000002d58        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c90        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_temperature_layer
-                0x0000000000002d5c        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c94        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_splash_right_bitmap
-                0x0000000000002d60        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c98        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_right_column_layer
-                0x0000000000002d64        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002c9c        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_date_font
-                0x0000000000002d68        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002ca0        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_splash_anim_started
-                0x0000000000002d6c        0x1 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000002d6d        0x3 
+                0x0000000000002ca4        0x1 src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000002ca5        0x3 
  .bss.s_splash_right_eye_layer
-                0x0000000000002d70        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002ca8        0x4 src/c/sheikah_slate.c.33.o
  .bss.s_date_set
-                0x0000000000002d74        0x1 src/c/sheikah_slate.c.25.o
- *fill*         0x0000000000002d75        0x3 
+                0x0000000000002cac        0x1 src/c/sheikah_slate.c.33.o
+ *fill*         0x0000000000002cad        0x3 
  .bss.s_weather_icon_layer
-                0x0000000000002d78        0x4 src/c/sheikah_slate.c.25.o
+                0x0000000000002cb0        0x4 src/c/sheikah_slate.c.33.o
 
 DISCARD
  libc.a(*)
@@ -1706,13 +1709,13 @@ OUTPUT(/mnt/c/Users/harri/Documents/pebble/SheikahSlate_PebbleWatchface/sheikah_
  .ARM.attributes
                 0x0000000000000019       0x29 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .ARM.attributes
-                0x0000000000000042       0x33 src/c/sheikah_slate.c.25.o
+                0x0000000000000042       0x33 src/c/sheikah_slate.c.33.o
  .ARM.attributes
-                0x0000000000000075       0x33 aplite/appinfo.auto.c.25.o
+                0x0000000000000075       0x33 aplite/appinfo.auto.c.33.o
  .ARM.attributes
-                0x00000000000000a8       0x33 aplite/src/resource_ids.auto.c.25.o
+                0x00000000000000a8       0x33 aplite/src/resource_ids.auto.c.33.o
  .ARM.attributes
-                0x00000000000000db       0x33 src/message_keys.auto.c.25.o
+                0x00000000000000db       0x33 src/message_keys.auto.c.33.o
  .ARM.attributes
                 0x000000000000010e       0x21 /home/linksky/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .ARM.attributes
@@ -1733,80 +1736,80 @@ OUTPUT(/mnt/c/Users/harri/Documents/pebble/SheikahSlate_PebbleWatchface/sheikah_
 .comment        0x0000000000000000       0x4e
  .comment       0x0000000000000000       0x4e /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
                                          0x4f (size before relaxing)
- .comment       0x0000000000000000       0x4f src/c/sheikah_slate.c.25.o
- .comment       0x0000000000000000       0x4f aplite/appinfo.auto.c.25.o
- .comment       0x0000000000000000       0x4f aplite/src/resource_ids.auto.c.25.o
- .comment       0x0000000000000000       0x4f src/message_keys.auto.c.25.o
+ .comment       0x0000000000000000       0x4f src/c/sheikah_slate.c.33.o
+ .comment       0x0000000000000000       0x4f aplite/appinfo.auto.c.33.o
+ .comment       0x0000000000000000       0x4f aplite/src/resource_ids.auto.c.33.o
+ .comment       0x0000000000000000       0x4f src/message_keys.auto.c.33.o
  .comment       0x0000000000000000       0x4f /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
 
-.debug_info     0x0000000000000000     0x40cc
- .debug_info    0x0000000000000000     0x3671 src/c/sheikah_slate.c.25.o
- .debug_info    0x0000000000003671      0x31a aplite/appinfo.auto.c.25.o
- .debug_info    0x000000000000398b      0x1fb aplite/src/resource_ids.auto.c.25.o
- .debug_info    0x0000000000003b86      0x1b3 src/message_keys.auto.c.25.o
- .debug_info    0x0000000000003d39       0xb7 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
- .debug_info    0x0000000000003df0       0xb7 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
- .debug_info    0x0000000000003ea7       0xb7 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
- .debug_info    0x0000000000003f5e       0xb7 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
- .debug_info    0x0000000000004015       0xb7 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
+.debug_info     0x0000000000000000     0x423e
+ .debug_info    0x0000000000000000     0x37e3 src/c/sheikah_slate.c.33.o
+ .debug_info    0x00000000000037e3      0x31a aplite/appinfo.auto.c.33.o
+ .debug_info    0x0000000000003afd      0x1fb aplite/src/resource_ids.auto.c.33.o
+ .debug_info    0x0000000000003cf8      0x1b3 src/message_keys.auto.c.33.o
+ .debug_info    0x0000000000003eab       0xb7 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
+ .debug_info    0x0000000000003f62       0xb7 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
+ .debug_info    0x0000000000004019       0xb7 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
+ .debug_info    0x00000000000040d0       0xb7 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
+ .debug_info    0x0000000000004187       0xb7 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
 
-.debug_abbrev   0x0000000000000000      0x703
- .debug_abbrev  0x0000000000000000      0x579 src/c/sheikah_slate.c.25.o
- .debug_abbrev  0x0000000000000579       0x9e aplite/appinfo.auto.c.25.o
- .debug_abbrev  0x0000000000000617       0x44 aplite/src/resource_ids.auto.c.25.o
- .debug_abbrev  0x000000000000065b       0x44 src/message_keys.auto.c.25.o
- .debug_abbrev  0x000000000000069f       0x14 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
- .debug_abbrev  0x00000000000006b3       0x14 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
- .debug_abbrev  0x00000000000006c7       0x14 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
- .debug_abbrev  0x00000000000006db       0x14 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
- .debug_abbrev  0x00000000000006ef       0x14 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
+.debug_abbrev   0x0000000000000000      0x68d
+ .debug_abbrev  0x0000000000000000      0x503 src/c/sheikah_slate.c.33.o
+ .debug_abbrev  0x0000000000000503       0x9e aplite/appinfo.auto.c.33.o
+ .debug_abbrev  0x00000000000005a1       0x44 aplite/src/resource_ids.auto.c.33.o
+ .debug_abbrev  0x00000000000005e5       0x44 src/message_keys.auto.c.33.o
+ .debug_abbrev  0x0000000000000629       0x14 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
+ .debug_abbrev  0x000000000000063d       0x14 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
+ .debug_abbrev  0x0000000000000651       0x14 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
+ .debug_abbrev  0x0000000000000665       0x14 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
+ .debug_abbrev  0x0000000000000679       0x14 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
 
-.debug_loc      0x0000000000000000      0xfbc
- .debug_loc     0x0000000000000000      0xfbc src/c/sheikah_slate.c.25.o
+.debug_loc      0x0000000000000000     0x1006
+ .debug_loc     0x0000000000000000     0x1006 src/c/sheikah_slate.c.33.o
 
-.debug_aranges  0x0000000000000000      0x1c0
+.debug_aranges  0x0000000000000000      0x1c8
  .debug_aranges
-                0x0000000000000000       0xd8 src/c/sheikah_slate.c.25.o
+                0x0000000000000000       0xe0 src/c/sheikah_slate.c.33.o
  .debug_aranges
-                0x00000000000000d8       0x18 aplite/appinfo.auto.c.25.o
+                0x00000000000000e0       0x18 aplite/appinfo.auto.c.33.o
  .debug_aranges
-                0x00000000000000f0       0x18 aplite/src/resource_ids.auto.c.25.o
+                0x00000000000000f8       0x18 aplite/src/resource_ids.auto.c.33.o
  .debug_aranges
-                0x0000000000000108       0x18 src/message_keys.auto.c.25.o
+                0x0000000000000110       0x18 src/message_keys.auto.c.33.o
  .debug_aranges
-                0x0000000000000120       0x20 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
+                0x0000000000000128       0x20 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
  .debug_aranges
-                0x0000000000000140       0x20 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
+                0x0000000000000148       0x20 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
  .debug_aranges
-                0x0000000000000160       0x20 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
+                0x0000000000000168       0x20 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
  .debug_aranges
-                0x0000000000000180       0x20 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
+                0x0000000000000188       0x20 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
  .debug_aranges
-                0x00000000000001a0       0x20 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
+                0x00000000000001a8       0x20 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
 
-.debug_ranges   0x0000000000000000      0x328
- .debug_ranges  0x0000000000000000      0x328 src/c/sheikah_slate.c.25.o
+.debug_ranges   0x0000000000000000      0x368
+ .debug_ranges  0x0000000000000000      0x368 src/c/sheikah_slate.c.33.o
 
-.debug_line     0x0000000000000000     0x12d5
- .debug_line    0x0000000000000000      0x8f8 src/c/sheikah_slate.c.25.o
- .debug_line    0x00000000000008f8      0x123 aplite/appinfo.auto.c.25.o
- .debug_line    0x0000000000000a1b       0xcd aplite/src/resource_ids.auto.c.25.o
- .debug_line    0x0000000000000ae8       0xc6 src/message_keys.auto.c.25.o
- .debug_line    0x0000000000000bae      0x20a /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
- .debug_line    0x0000000000000db8      0x226 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
- .debug_line    0x0000000000000fde       0x86 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
- .debug_line    0x0000000000001064      0x128 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
- .debug_line    0x000000000000118c      0x149 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
+.debug_line     0x0000000000000000     0x1287
+ .debug_line    0x0000000000000000      0x8aa src/c/sheikah_slate.c.33.o
+ .debug_line    0x00000000000008aa      0x123 aplite/appinfo.auto.c.33.o
+ .debug_line    0x00000000000009cd       0xcd aplite/src/resource_ids.auto.c.33.o
+ .debug_line    0x0000000000000a9a       0xc6 src/message_keys.auto.c.33.o
+ .debug_line    0x0000000000000b60      0x20a /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubdf3.o)
+ .debug_line    0x0000000000000d6a      0x226 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivdf3.o)
+ .debug_line    0x0000000000000f90       0x86 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_fixdfsi.o)
+ .debug_line    0x0000000000001016      0x128 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_addsubsf3.o)
+ .debug_line    0x000000000000113e      0x149 /home/linksky/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a(_arm_muldivsf3.o)
 
-.debug_str      0x0000000000000000     0x1bc5
- .debug_str     0x0000000000000000     0x16a8 src/c/sheikah_slate.c.25.o
-                                       0x18f2 (size before relaxing)
- .debug_str     0x00000000000016a8      0x236 aplite/appinfo.auto.c.25.o
+.debug_str      0x0000000000000000     0x1cd4
+ .debug_str     0x0000000000000000     0x17b7 src/c/sheikah_slate.c.33.o
+                                       0x1a0c (size before relaxing)
+ .debug_str     0x00000000000017b7      0x236 aplite/appinfo.auto.c.33.o
                                         0x343 (size before relaxing)
- .debug_str     0x00000000000018de      0x2cf aplite/src/resource_ids.auto.c.25.o
+ .debug_str     0x00000000000019ed      0x2cf aplite/src/resource_ids.auto.c.33.o
                                         0x3bd (size before relaxing)
- .debug_str     0x0000000000001bad       0x18 src/message_keys.auto.c.25.o
+ .debug_str     0x0000000000001cbc       0x18 src/message_keys.auto.c.33.o
                                         0x2d6 (size before relaxing)
 
-.debug_frame    0x0000000000000000      0x2bc
- .debug_frame   0x0000000000000000      0x2bc src/c/sheikah_slate.c.25.o
+.debug_frame    0x0000000000000000      0x2d0
+ .debug_frame   0x0000000000000000      0x2d0 src/c/sheikah_slate.c.33.o

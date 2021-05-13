@@ -4,7 +4,7 @@
 #define NUM_RUNES 7
 #define UI_COLOR 0x55ffff
 #define NUM_NOTCHES 5
-#define NUM_WEATHER_ICONS 6
+#define NUM_WEATHER_ICONS 6 
 #define MAX_CHARS 22
 // Persistent storage key
 #define SETTINGS_KEY 1
@@ -15,12 +15,14 @@
 #define TRIFORCE_PIXELS 9
 
 #define DEMO_MODE false
-#define DEMO_BATTERY 40
+#define DEMO_BATTERY 10
 #define DEMO_CHARGING false
 #define DEMO_TEMPERATURE 60
 #define DEMO_CONDITIONS 2
 #define DEMO_RUNE 0
 #define DEMO_BLUETOOTH true
+#define DEMO_CYCLE true
+#define DEMO_CYCLE_POS 4
 
 static Window *s_main_window;
 
@@ -47,6 +49,79 @@ typedef enum weather {
   SNOWY,
   STORMY
 } Weather;
+
+// Demo values
+static char s_demo_times[][8] = {
+  "05:33",
+  "8:22",
+  "14:01",
+  "20:00",
+  "11:59",
+  "03:15"
+};
+
+static char s_demo_dates[][8] = {
+  "Mar 22",
+  "Jul 05",
+  "Dec 31",
+  "Feb 18",
+  "Nov 28",
+  "Jan 01"
+};
+
+static bool s_demo_bluetooth[] = {
+  true,
+  true,
+  true,
+  false,
+  false,
+  false
+};
+
+static uint8_t s_demo_battery[] = {
+  80,
+  50,
+  10,
+  100,
+  70,
+  30
+};
+
+static bool s_demo_charging[] = {
+  false,
+  false,
+  false,
+  false,
+  true,
+  true
+};
+
+static Weather s_demo_weather[] = {
+  SUNNY,
+  PARTLYCLOUDY,
+  CLOUDY,
+  STORMY,
+  RAINY,
+  SNOWY
+};
+
+static int s_demo_temperature[] = {
+  100,
+  80,
+  60,
+  40,
+  90,
+  0
+};
+
+static uint8_t s_demo_runes[] = {
+  0,
+  2,
+  3,
+  4,
+  5,
+  6
+};
 
 // Define settings struct
 typedef struct ClaySettings {
@@ -212,6 +287,7 @@ static void draw_frame(Layer *layer, GContext *ctx) {
 // also rather than having a bitmap, we draw the noise
 // around the edges of the screen
 static void draw_fringes(Layer *layer, GContext *ctx) {
+  return;
 #if defined(PBL_RECT)
   GRect bounds = layer_get_bounds(layer);
   graphics_context_set_stroke_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(UI_COLOR)));
@@ -301,25 +377,8 @@ static void battery_callback(BatteryChargeState state) {
   layer_mark_dirty(s_battery_layer); // tells system to re-render at next opportunity
 }
 
-// display battery as stamina bar
-static void battery_update_proc(Layer *layer, GContext *ctx) {
-  GRect bounds = layer_get_bounds(layer);
-  uint8_t cur_battery = DEMO_MODE ? DEMO_BATTERY : s_battery_level;
-  GColor curColor = PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0x00FF00)); // green when battery is healthy
-  if (cur_battery <= 10){ // red when running out of "stamina"
-    curColor = PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0xFF0000));
-  }
-  bool charging = DEMO_MODE ? DEMO_CHARGING : s_charging;
-  if (charging){ // yellow when charging (values are weird when charging tho)
-    curColor = PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0xFFFF00));
-  }
-
-  int length = (cur_battery * TRIG_MAX_ANGLE) / 100; // get percent around circle
-
-  // fill grey background
-  graphics_context_set_fill_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0x555555)));
-  graphics_fill_radial(ctx, bounds, GOvalScaleModeFitCircle, 7, 0, TRIG_MAX_ANGLE);
-#if defined(PBL_BW)
+static void dither(Layer *layer, GContext *ctx) {
+  // Dither it up
   GBitmap *fb = graphics_capture_frame_buffer(ctx);
   GRect frame = layer_get_frame(layer);
   for (uint16_t y = frame.origin.y; y < frame.origin.y + frame.size.h; y++) {
@@ -336,11 +395,43 @@ static void battery_update_proc(Layer *layer, GContext *ctx) {
     }
   }
   graphics_release_frame_buffer(ctx, fb);
+}
+
+// display battery as stamina bar
+static void battery_update_proc(Layer *layer, GContext *ctx) {
+  GRect bounds = layer_get_bounds(layer);
+  uint8_t cur_battery = DEMO_MODE ? (DEMO_CYCLE ? s_demo_battery[DEMO_CYCLE_POS] : DEMO_BATTERY) : s_battery_level;
+  GColor curColor = PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0x00FF00)); // green when battery is healthy
+  if (cur_battery <= 10){ // red when running out of "stamina"
+    curColor = PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0xFF0000));
+  }
+  bool charging = DEMO_MODE ? (DEMO_CYCLE ? s_demo_charging[DEMO_CYCLE_POS] : DEMO_CHARGING) : s_charging;
+  if (charging){ // yellow when charging (values are weird when charging tho)
+    curColor = PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0xFFFF00));
+  }
+
+  int length = (cur_battery * TRIG_MAX_ANGLE) / 100; // get percent around circle
+
+  // fill grey background
+  if (charging) {
+    graphics_context_set_fill_color(ctx, PBL_IF_BW_ELSE(GColorWhite, GColorFromHEX(0x555555)));
+  } else {
+    graphics_context_set_fill_color(ctx, PBL_IF_BW_ELSE(GColorBlack, GColorFromHEX(0x555555)));
+  }
+  graphics_fill_radial(ctx, bounds, GOvalScaleModeFitCircle, 7, 0, TRIG_MAX_ANGLE);
+#if defined(PBL_BW)
+  dither(layer, ctx);
 #endif
 
   // then fill up stamina bar counterclockwise
   graphics_context_set_fill_color(ctx, curColor);
   graphics_fill_radial(ctx, bounds, GOvalScaleModeFitCircle, 7, TRIG_MAX_ANGLE-length, TRIG_MAX_ANGLE);
+
+#if defined(PBL_BW)
+  if (!charging && cur_battery <= 10) {
+    dither(layer, ctx);
+  }
+#endif
 }
 
 // moves a bitmap by delta_x and delta_y
@@ -412,7 +503,7 @@ static void init_splash_anim() {
 static void bluetooth_callback(bool connected) {
   // change sheikah sensor to represent bluetooth connection
   if (DEMO_MODE) {
-    connected = DEMO_BLUETOOTH;
+    connected = (DEMO_CYCLE ? s_demo_bluetooth[DEMO_CYCLE_POS] : DEMO_BLUETOOTH);
   }
 
   bitmap_layer_set_bitmap(s_bt_icon_layer, connected ? s_bt_icon_bitmap_conn : s_bt_icon_bitmap_disc);
@@ -507,7 +598,9 @@ static void pick_new_rune(){
       i++;
     }
   }
-  if (DEMO_MODE) i = DEMO_RUNE;
+  if (DEMO_MODE) {
+    i = (DEMO_CYCLE ? s_demo_runes[DEMO_CYCLE_POS] : DEMO_RUNE);
+  }
   gbitmap_destroy(s_rune_bitmap); // unload our old rune
   s_rune_bitmap = gbitmap_create_with_resource(RUNES[i]);
   bitmap_layer_set_bitmap(s_rune_layer, s_rune_bitmap); // and toss in the next
@@ -674,8 +767,8 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
 
   // if weather data is available, use it
   if (DEMO_MODE) {
-    settings.TEMPERATURE = DEMO_TEMPERATURE;
-    settings.CONDITIONS = DEMO_CONDITIONS;
+    settings.TEMPERATURE = (DEMO_CYCLE ? s_demo_temperature[DEMO_CYCLE_POS] : DEMO_TEMPERATURE);
+    settings.CONDITIONS = (DEMO_CYCLE ? s_demo_weather[DEMO_CYCLE_POS] : DEMO_CONDITIONS);
     if (s_date_set && !s_weather_loaded && !s_splash_anim_started) {
       init_splash_anim();
     }
@@ -841,7 +934,7 @@ static void main_window_load(Window *window) {
   s_time_layer = text_layer_create(GRect(0, 40, bounds.size.w, 32));
   s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_32));
 #else
-  s_time_layer = text_layer_create(GRect(0, 1, bounds.size.w, 24));
+  s_time_layer = text_layer_create(GRect(0, -2, bounds.size.w, 24));
   s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_24));
 #endif
   text_layer_set_background_color(s_time_layer, GColorClear);
@@ -854,7 +947,7 @@ static void main_window_load(Window *window) {
   s_date_layer = text_layer_create(GRect(0, 100, bounds.size.w, 32));
   s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_32));
 #else
-  s_date_layer = text_layer_create(GRect(0, 137, bounds.size.w, 22));
+  s_date_layer = text_layer_create(GRect(0, 140, bounds.size.w, 22));
   s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_22));
 #endif
   text_layer_set_background_color(s_date_layer, GColorClear);
@@ -903,7 +996,7 @@ static void main_window_load(Window *window) {
 #if defined(PBL_ROUND)
   s_bt_icon_layer = bitmap_layer_create(GRect(30,78,25,24));
 #else
-  s_bt_icon_layer = bitmap_layer_create(GRect(16,3,25,24));
+  s_bt_icon_layer = bitmap_layer_create(GRect(16,1,25,24));
 #endif
   s_bt_icon_bitmap_conn = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BT_CONN);
   s_bt_icon_bitmap_disc = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BT_DISC);
@@ -914,7 +1007,7 @@ static void main_window_load(Window *window) {
   #if defined(PBL_ROUND)
     s_battery_layer = layer_create(GRect(122, 79, 22, 22));
   #else
-    s_battery_layer = layer_create(GRect(105, 4, 22, 22));
+    s_battery_layer = layer_create(GRect(105, 2, 22, 22));
   #endif
   // assign update procedure to battery layer
   layer_set_update_proc(s_battery_layer, battery_update_proc);
@@ -923,7 +1016,7 @@ static void main_window_load(Window *window) {
 #if defined(PBL_ROUND)
   s_weather_icon_layer = bitmap_layer_create(GRect(61,78,24,24));
 #else
-  s_weather_icon_layer = bitmap_layer_create(GRect(16,141,24,24));
+  s_weather_icon_layer = bitmap_layer_create(GRect(16,143,24,24));
 #endif
   s_weather_icon_bitmap = gbitmap_create_with_resource(WEATHER_ICONS[rand() % NUM_WEATHER_ICONS]);
   bitmap_layer_set_bitmap(s_weather_icon_layer, s_weather_icon_bitmap);
@@ -932,7 +1025,7 @@ static void main_window_load(Window *window) {
 #if defined(PBL_ROUND)
   s_temperature_layer = layer_create(GRect(92, 79, 22, 22));
 #else
-  s_temperature_layer = layer_create(GRect(105, 143, 22, 22));
+  s_temperature_layer = layer_create(GRect(105, 145, 22, 22));
 #endif
   layer_set_update_proc(s_temperature_layer, temperature_update_proc);
 
@@ -1068,26 +1161,34 @@ static void main_window_unload(Window *window) {
 
 // update the time display
 static void update_time() {
-  time_t temp = time(NULL);
-  struct tm *tick_time = localtime(&temp);
+  if (DEMO_MODE && DEMO_CYCLE) {
+    text_layer_set_text(s_time_layer, s_demo_times[DEMO_CYCLE_POS]);
+  } else {
+    time_t temp = time(NULL);
+    struct tm *tick_time = localtime(&temp);
 
-  // put hours and minutes into buffer
-  static char s_buffer[8];
-  strftime(s_buffer, sizeof(s_buffer), clock_is_24h_style() ?
-                                        "%H:%M" : "%I:%M", tick_time);
-  // display it
-  text_layer_set_text(s_time_layer, s_buffer);
+    // put hours and minutes into buffer
+    static char s_buffer[8];
+    strftime(s_buffer, sizeof(s_buffer), clock_is_24h_style() ?
+                                          "%H:%M" : "%I:%M", tick_time);
+    // display it
+    text_layer_set_text(s_time_layer, s_buffer);    
+  }
 }
 
 static void update_date(struct tm *tick_time){
-  static char s_date_buffer[8];
-  if (settings.AmericanDate) {
-    strftime(s_date_buffer, sizeof(s_date_buffer), "%b %d", tick_time); // displayed as "Jan 01"
+  if (DEMO_MODE && DEMO_CYCLE) {
+    text_layer_set_text(s_date_layer, s_demo_dates[DEMO_CYCLE_POS]);
   } else {
-    strftime(s_date_buffer, sizeof(s_date_buffer), "%d %b", tick_time); // displayed as "01 Jan"
-  }
+    static char s_date_buffer[8];
+    if (settings.AmericanDate) {
+      strftime(s_date_buffer, sizeof(s_date_buffer), "%b %d", tick_time); // displayed as "Jan 01"
+    } else {
+      strftime(s_date_buffer, sizeof(s_date_buffer), "%d %b", tick_time); // displayed as "01 Jan"
+    }
 
-  text_layer_set_text(s_date_layer, s_date_buffer);
+    text_layer_set_text(s_date_layer, s_date_buffer);
+  }
 }
 
 // this fires every minute
