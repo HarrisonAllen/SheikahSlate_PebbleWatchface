@@ -4,12 +4,13 @@
 | ---------- | -------- |----------|
 | Aplite     | Pebble<br>Pebble Steel|Yes|
 | Basalt     | Pebble Time<br>Pebble Time Steel|Yes|
-| Chalk      | Pebble Time Round|**No**|
+| Chalk      | Pebble Time Round|Yes|
 | Diorite    | Pebble 2<br>Pebble 2 HR|Yes|
-| Emery      | Pebble Time 2|**NO**|
+| Emery      | Pebble Time 2|**No**|
 ## Layout
 ![Watchface Layout](readme_resources/Layout.png "Watchface Layout")
 ## Features
+Slightly outdated, but whatevs
 ### Time and Date display
 Supports 12 & 24hr display (set in Pebble settings on the watch).
 ### Bluetooth Indicator
