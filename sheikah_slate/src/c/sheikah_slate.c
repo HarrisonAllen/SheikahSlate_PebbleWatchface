@@ -931,8 +931,8 @@ static void main_window_load(Window *window) {
   // Watchface Resources
   // time
 #if defined(PBL_ROUND)
-  s_time_layer = text_layer_create(GRect(0, 40, bounds.size.w, 32));
-  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_32));
+  s_time_layer = text_layer_create(GRect(0, 20, bounds.size.w, 48));
+  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_48));
 #else
   s_time_layer = text_layer_create(GRect(0, -2, bounds.size.w, 24));
   s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_24));
@@ -944,8 +944,8 @@ static void main_window_load(Window *window) {
 
   // date
 #if defined(PBL_ROUND)
-  s_date_layer = text_layer_create(GRect(0, 100, bounds.size.w, 32));
-  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_32));
+  s_date_layer = text_layer_create(GRect(0, 100, bounds.size.w, 48));
+  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_48));
 #else
   s_date_layer = text_layer_create(GRect(0, 140, bounds.size.w, 22));
   s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOTW_22));
@@ -1172,7 +1172,7 @@ static void update_time() {
     strftime(s_buffer, sizeof(s_buffer), clock_is_24h_style() ?
                                           "%H:%M" : "%I:%M", tick_time);
     // display it
-    text_layer_set_text(s_time_layer, s_buffer);    
+    text_layer_set_text(s_time_layer, s_buffer);  
   }
 }
 

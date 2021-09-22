@@ -51,7 +51,7 @@
         {
           "characterRegex": "[0-9:A-Za-z ]",
           "type": "font",
-          "name": "FONT_BOTW_32",
+          "name": "FONT_BOTW_48",
           "file": "fonts/botw.ttf",
           "compatibility": "2.7",
           "targetPlatforms": [
