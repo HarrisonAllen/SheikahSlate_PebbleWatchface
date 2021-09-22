@@ -1,4 +1,4 @@
-var myAPIKey = 'b15cbc7ad76f235af7fa601ae990c3fe'; // kew for open weather
+var myAPIKey = 'SECRET'; // key for open weather 
 var metric = false; // celsius or fahrenheit
 var use_current_location = false; // use GPS
 var lat = '42.36'; // latitude for weather w/o GPS
