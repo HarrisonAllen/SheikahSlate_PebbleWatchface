@@ -42,7 +42,7 @@ The following are customizable within the settings app:
   * Cold ![cold](readme_resources/cold.png "Cold")
   * Comfortable ![comfortable](readme_resources/comfortable.png "Comfortable")
   * Hot ![hot](readme_resources/hot.png "Hot")
-  * Very hot ![very hot](readme_resources/coldest.png "Very Hot")
+  * Very hot ![very hot](readme_resources/hottest.png "Very Hot")
 
 ![Settings](readme_resources/Settings.png "Settings")
 ### Contact
