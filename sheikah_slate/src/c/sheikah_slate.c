@@ -494,6 +494,7 @@ static void splash_anim_handler(void *context) {
 
 // open the watchface by starting animation
 static void init_splash_anim() {
+  if (s_splash_anim_started) return;
   s_cur_frame = 0;
   s_splash_anim_started = true;
   app_timer_register(1, splash_anim_handler, NULL);
@@ -1255,7 +1256,7 @@ static void init() {
   });
 
   // callback for timeout if things take too long to load
-  app_timer_register(5000, splash_timeout, NULL);
+  app_timer_register(500, splash_timeout, NULL);
 
   // Register callbacks for settings/weather updates
   app_message_register_inbox_received(inbox_received_callback);
