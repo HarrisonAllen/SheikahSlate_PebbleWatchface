@@ -1,8 +1,8 @@
 var myAPIKey = 'SECRET'; // key for open weather 
 var metric = false; // celsius or fahrenheit
 var use_current_location = false; // use GPS
-var lat = '42.36'; // latitude for weather w/o GPS
-var lon = '-71.1'; // longitude for weather w/o GPS
+var lat = localStorage.getItem('lat') || '42.36'; // latitude for weather w/o GPS
+var lon = localStorage.getItem('lon') || '-71.1'; // longitude for weather w/o GPS
 
 // Import the Clay package
 var Clay = require('pebble-clay');
@@ -22,10 +22,20 @@ var xhrRequest = function (url, type, callback) {
 };
 
 function locationSuccess(pos) {
+	if (pos) {
+		lat = pos.coords.latitude;
+		lon = pos.coords.longitude;
+		localStorage.setItem('lat', lat);
+		localStorage.setItem('lon', lon);
+	}
+	else {
+		lat = localStorage.getItem('lat');
+		lon = localStorage.getItem('lon');
+	}
 	// Construct URL
 	var url = 'http://api.openweathermap.org/data/2.5/weather?' + 
-		'lat=' + (use_current_location ? pos.coords.latitude : lat) + 
-		'&lon=' + (use_current_location ? pos.coords.longitude : lon) + 
+		'lat=' + lat + 
+		'&lon=' + lon + 
 		'&appid=' + myAPIKey +
 		'&units=' + (metric ? 'metric' : 'imperial');
 
@@ -72,6 +82,7 @@ function locationSuccess(pos) {
 
 function locationError(err) {
 	console.log('Error requesting location!');
+	locationSuccess(null);
 }
 
 function getWeather() {
@@ -123,6 +134,10 @@ Pebble.addEventListener('appmessage',
 			lat = dict['Latitude'];
 		if ('Longitude' in dict) // longitude if not using current location
 			lon = dict['Longitude'];
+		if (lat && lon) {
+			localStorage.setItem('lat', lat);
+			localStorage.setItem('lon', lon);
+		}
 
 		getWeather();
 	}
