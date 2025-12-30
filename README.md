@@ -6,7 +6,8 @@
 | Basalt     | Pebble Time<br>Pebble Time Steel|Yes|
 | Chalk      | Pebble Time Round|Yes|
 | Diorite    | Pebble 2<br>Pebble 2 HR|Yes|
-| Emery      | Pebble Time 2|**No**|
+| Emery      | Pebble Time 2|Yes (via scaling)|
+| Flint      | Core 2 Duo|Yes (by diorite)|
 ## Layout
 ![Watchface Layout](readme_resources/Layout.png "Watchface Layout")
 ## Features
