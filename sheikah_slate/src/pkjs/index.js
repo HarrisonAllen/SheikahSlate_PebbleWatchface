@@ -37,7 +37,8 @@ function locationSuccess(pos) {
 		'lat=' + lat + 
 		'&lon=' + lon + 
 		'&appid=' + myAPIKey +
-		'&units=' + (metric ? 'metric' : 'imperial');
+		'&units=' + (metric ? 'metric' : 'imperial') + 
+		'&exclude=hourly,daily';;
 
 	xhrRequest(url, 'GET',
 		function(responseText) {
@@ -45,15 +46,19 @@ function locationSuccess(pos) {
 			var json = JSON.parse(responseText);
 
 			var temperature = json.main.temp;
+			var cur_time = json.dt;
+			var sunrise = json.sys.sunrise;
+			var sunset = json.sys.sunset;
+			var is_day = cur_time > sunrise && cur_time < sunset;
 
 			var conditions = 0; // sunny
 			var id = json.weather[0].id;
 			if (id > 802) {
 				conditions = 2; // cloudy
 			} else if (id > 800) {
-				conditions = 1; // partly cloudy
+				conditions = is_day ? 1 : 7; // partly cloudy
 			} else if (id == 800) {
-				conditions = 0; // sunny
+				conditions = is_day ? 0 : 6; // sunny
 			} else if (id > 700) {
 				conditions = 2; // cloudy
 			} else if (id > 600 || id == 511) { //snow/freezing rain

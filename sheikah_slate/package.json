@@ -1,7 +1,7 @@
 {
   "name": "sheikah_slate",
   "author": "Harrison Allen",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "keywords": [
     "pebble-app"
   ],
@@ -144,11 +144,21 @@
           "name": "IMAGE_WEATHER_SUNNY",
           "file": "images/WeatherSunny.png"
         },
+      {
+          "type": "bitmap", 
+          "name": "IMAGE_WEATHER_MOONY", 
+          "file": "images/WeatherMoony.png"
+      }, 
         {
           "type": "bitmap",
           "name": "IMAGE_WEATHER_PARTLYCLOUDY",
           "file": "images/WeatherPartlyCloudy.png"
         },
+      {
+          "type": "bitmap", 
+          "name": "IMAGE_WEATHER_PARTLYMOONY", 
+          "file": "images/WeatherPartlyMoony.png"
+      }, 
         {
           "type": "bitmap",
           "name": "IMAGE_WEATHER_CLOUDY",
